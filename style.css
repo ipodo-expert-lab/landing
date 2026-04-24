@@ -1964,7 +1964,8 @@ footer {
   body {
     padding-bottom: 70px;
   }
-}/* Lang switcher */
+}
+/* Lang switcher */
 .lang-switcher {
   display: flex;
   gap: 4px;
@@ -1972,8 +1973,8 @@ footer {
 }
 .lang-btn {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.25);
-  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(0,0,0,0.2);
+  color: var(--mid);
   font-family: 'Onest', sans-serif;
   font-size: 12px;
   font-weight: 600;
@@ -1982,10 +1983,11 @@ footer {
   cursor: pointer;
   transition: all 0.2s;
   letter-spacing: 0.05em;
+  line-height: 1;
 }
 .lang-btn:hover {
-  color: #fff;
-  border-color: rgba(255,255,255,0.5);
+  color: var(--dark);
+  border-color: rgba(0,0,0,0.4);
 }
 .lang-btn.lang-active {
   background: #6B8CFF;
