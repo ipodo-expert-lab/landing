@@ -58,7 +58,7 @@ exports.handler = async (event) => {
               <p style="color:#aaa;font-size:11px;margin:0">iPODO expert lab · Budva, Montenegro · +382 67 417 580</p>
             </div>
           </div>`,
-          from: { name: "iPODO expert lab", email: "ipodoexpert@gmail.com" },
+          from: { name: "iPODO expert lab", email: "info@ipodoexpertlab.com" },
           to: [{ name, email }],
         },
       }),
@@ -82,7 +82,7 @@ exports.handler = async (event) => {
               <tr><td style="padding:10px;color:#888">Поток</td><td style="padding:10px;font-weight:700;color:#6B8CFF">${stream}</td></tr>
             </table>
           </div>`,
-          from: { name: "iPODO expert lab", email: "ipodoexpert@gmail.com" },
+          from: { name: "iPODO expert lab", email: "info@ipodoexpertlab.com" },
           to: [{ name: "Admin", email: "ipodoexpert@gmail.com" }],
         },
       }),
