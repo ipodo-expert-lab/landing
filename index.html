@@ -29,7 +29,9 @@
             <li><a href="#reviews" id="nav_reviews">Отзывы</a></li>
             <li><a href="#pricing" id="nav_pricing">Цены</a></li>
           </ul>
-          <div class="lang-switcher"><button class="lang-btn lang-active" data-lang="ru" onclick="applyLang('ru')">RU</button><button class="lang-btn" data-lang="me" onclick="applyLang('me')">ME</button></div>
+          <div class="lang-switcher"><button class="lang-btn lang-active" data-lang="ru"
+              onclick="applyLang('ru')">RU</button><button class="lang-btn" data-lang="me"
+              onclick="applyLang('me')">ME</button></div>
           <a href="#form" class="nav-cta" id="nav_cta">Записаться</a>
         </div>
       </div>
@@ -58,7 +60,8 @@
         </p>
         <ul class="hero-checklist fade-up" style="transition-delay:.3s">
           <li><span class="check-icon">✓</span><span id="hero_li1">Анатомия стопы и ногтевой пластины с нуля</span></li>
-          <li><span class="check-icon">✓</span><span id="hero_li2">Онихолизис: распознать и работать правильно</span></li>
+          <li><span class="check-icon">✓</span><span id="hero_li2">Онихолизис: распознать и работать правильно</span>
+          </li>
           <li><span class="check-icon">✓</span><span id="hero_li3">Практика на живых моделях с аппаратом</span></li>
           <li><span class="check-icon">✓</span><span id="hero_li4">Сертификат подолога iPODO expert lab</span></li>
         </ul>
@@ -107,24 +110,24 @@
     <div class="container">
       <div class="stats-cards">
         <div class="stat-card fade-up"><span class="stat-emoji">🏆</span>
-          <div class="stat-label">Опыт</div>
+          <div class="stat-label" id="sc1_label">Опыт</div>
           <div class="stat-value">20+</div>
-          <div class="stat-desc">лет в практической подологии</div>
+          <div class="stat-desc" id="sc1_desc">лет в практической подологии</div>
         </div>
         <div class="stat-card fade-up" style="transition-delay:.08s"><span class="stat-emoji">👥</span>
-          <div class="stat-label">Случаи</div>
+          <div class="stat-label" id="sc2_label">Случаи</div>
           <div class="stat-value">10K+</div>
-          <div class="stat-desc">реальных случаев в практике</div>
+          <div class="stat-desc" id="sc2_desc">реальных случаев в практике</div>
         </div>
         <div class="stat-card fade-up" style="transition-delay:.16s"><span class="stat-emoji">📚</span>
-          <div class="stat-label">Преподавание</div>
+          <div class="stat-label" id="sc3_label">Преподавание</div>
           <div class="stat-value">2005</div>
-          <div class="stat-desc">год начала обучения специалистов</div>
+          <div class="stat-desc" id="sc3_desc">год начала обучения специалистов</div>
         </div>
         <div class="stat-card fade-up" style="transition-delay:.24s"><span class="stat-emoji">🌍</span>
-          <div class="stat-label">География</div>
+          <div class="stat-label" id="sc4_label">География</div>
           <div class="stat-value">INT</div>
-          <div class="stat-desc">международное обучение и практика</div>
+          <div class="stat-desc" id="sc4_desc">международное обучение и практика</div>
         </div>
       </div>
     </div>
@@ -138,22 +141,22 @@
       <div class="whom-cards">
         <div class="whom-card fade-up"><span class="whom-icon">✂️</span>
           <div class="whom-content">
-            <div class="whom-title">Вы мастер педикюра и хотите расти</div>
+            <div class="whom-title" id="fw1_title">Вы мастер педикюра и хотите расти</div>
             <div class="whom-desc">Делаете педикюр, но чувствуете, что не хватает понимания. Хотите браться за сложные
-              случаи и не теряться.</div>
+              случаи и не теряться. id_placeholder_fw1_desc</div>
           </div>
         </div>
         <div class="whom-card fade-up" style="transition-delay:.1s"><span class="whom-icon">🔬</span>
           <div class="whom-content">
-            <div class="whom-title">Уже работаете с медицинским педикюром</div>
-            <div class="whom-desc">Есть база, но нет системы. Хотите понять, почему ноготь ведёт себя именно так и как с
+            <div class="whom-title" id="fw2_title">Уже работаете с медицинским педикюром</div>
+            <div class="whom-desc" id="fw2_desc">Есть база, но нет системы. Хотите понять, почему ноготь ведёт себя именно так и как с
               этим работать грамотно.</div>
           </div>
         </div>
         <div class="whom-card fade-up" style="transition-delay:.2s"><span class="whom-icon">💡</span>
           <div class="whom-content">
-            <div class="whom-title">Хотите войти в подологию всерьёз</div>
-            <div class="whom-desc">Это ваш первый шаг. После семинара станет ясно, хотите ли вы идти дальше — на годовой
+            <div class="whom-title" id="fw3_title">Хотите войти в подологию всерьёз</div>
+            <div class="whom-desc" id="fw3_desc">Это ваш первый шаг. После семинара станет ясно, хотите ли вы идти дальше — на годовой
               профессиональный курс.</div>
           </div>
         </div>
@@ -167,7 +170,8 @@
       <div class="teacher-left">
         <div class="section-label" id="t_label">О преподавателе</div>
         <div class="section-title" id="t_title">Кто вас обучает</div>
-        <p class="teacher-desc" id="t_desc">Анна Геннадьевна — практикующий подолог с 1995 года. За 30 лет работы — более 10 000
+        <p class="teacher-desc" id="t_desc">Анна Геннадьевна — практикующий подолог с 1995 года. За 30 лет работы —
+          более 10 000
           случаев. С 2005 года обучает специалистов по всему миру. Основатель iPODO centre.</p>
       </div>
       <div class="teacher-card fade-up">
@@ -178,14 +182,15 @@
             <div class="teacher-title" id="t_role">Практикующий подолог с 1995 · Основатель iPODO centre</div>
           </div>
         </div>
-        <div class="teacher-quote" id="t_quote">«Я в подологии с 1995 года. За это время я видела, как одна ошибка мастера меняла
+        <div class="teacher-quote" id="t_quote">«Я в подологии с 1995 года. За это время я видела, как одна ошибка
+          мастера меняла
           качество жизни человека на годы. Именно поэтому я обучаю — чтобы таких историй становилось меньше.»</div>
         <div class="teacher-tags">
-          <span class="teacher-tag">10 000+ случаев</span>
-          <span class="teacher-tag">Преподаватель с 2005</span>
+          <span class="teacher-tag" id="ttag1">10 000+ случаев</span>
+          <span class="teacher-tag" id="ttag2">Преподаватель с 2005</span>
           <span class="teacher-tag">iPODO centre</span>
-          <span class="teacher-tag">Международная практика</span>
-          <span class="teacher-tag">Анатомия Неттера</span>
+          <span class="teacher-tag" id="ttag3">Международная практика</span>
+          <span class="teacher-tag" id="ttag4">Анатомия Неттера</span>
         </div>
       </div>
     </div>
@@ -198,18 +203,18 @@
       <div class="section-title" id="cmp_title">Обычный педикюр vs медицинский</div>
       <div class="comparison-grid">
         <div class="compare-card fade-up">
-          <div class="compare-title">Обычный педикюр</div>
-          <div class="compare-item"><span class="compare-x">✕</span>Работает только с внешним видом</div>
-          <div class="compare-item"><span class="compare-x">✕</span>Не понимает причину состояния</div>
-          <div class="compare-item"><span class="compare-x">✕</span>Не знает, когда нужно остановиться</div>
-          <div class="compare-item"><span class="compare-x">✕</span>Не различает состояния ногтя и стопы</div>
+          <div class="compare-title" id="cmp1_title">Обычный педикюр</div>
+          <div class="compare-item"><span class="compare-x">✕</span><span id="cmp1_i1">Работает только с внешним видом</span></div>
+          <div class="compare-item"><span class="compare-x">✕</span><span id="cmp1_i2">Не понимает причину состояния</span></div>
+          <div class="compare-item"><span class="compare-x">✕</span><span id="cmp1_i3">Не знает, когда нужно остановиться</span></div>
+          <div class="compare-item"><span class="compare-x">✕</span><span id="cmp1_i4">Не различает состояния ногтя и стопы</span></div>
         </div>
         <div class="compare-card highlighted fade-up" style="transition-delay:.1s">
-          <div class="compare-title">Медицинский педикюр</div>
-          <div class="compare-item"><span class="compare-check">✓</span>Оценивает состояние стопы и ногтя</div>
-          <div class="compare-item"><span class="compare-check">✓</span>Работает с причиной, а не следствием</div>
-          <div class="compare-item"><span class="compare-check">✓</span>Знает границы компетенций подолога</div>
-          <div class="compare-item"><span class="compare-check">✓</span>Понимает, когда направить к врачу</div>
+          <div class="compare-title" id="cmp2_title">Медицинский педикюр</div>
+          <div class="compare-item"><span class="compare-check">✓</span><span id="cmp2_i1">Оценивает состояние стопы и ногтя</span></div>
+          <div class="compare-item"><span class="compare-check">✓</span><span id="cmp2_i2">Работает с причиной, а не следствием</span></div>
+          <div class="compare-item"><span class="compare-check">✓</span><span id="cmp2_i3">Знает границы компетенций подолога</span></div>
+          <div class="compare-item"><span class="compare-check">✓</span><span id="cmp2_i4">Понимает, когда направить к врачу</span></div>
         </div>
       </div>
     </div>
@@ -220,39 +225,40 @@
     <div class="container">
       <div class="section-label" id="prog_label">Программа семинара</div>
       <div class="section-title" id="prog_title">Что вы получите за 2 дня</div>
-      <p class="prog-top-desc" id="prog_desc">16 академических часов. 50% времени — практика на живых моделях. Вводный курс: фундамент
+      <p class="prog-top-desc" id="prog_desc">16 академических часов. 50% времени — практика на живых моделях. Вводный
+        курс: фундамент
         и система мышления подолога.</p>
     </div>
   </div>
   <div class="prog-body">
     <div class="container">
-      <div class="program-intro" id="prog_intro">Это <strong>вводный курс</strong>. Не пытаемся вместить всё — даём <strong>систему
-          понимания</strong> и фундамент, на котором строится профессия подолога.</div>
+      <div class="program-intro" id="prog_intro">Это <strong>вводный курс</strong>. Не пытаемся вместить всё — даём
+        <strong>систему
+          понимания</strong> и фундамент, на котором строится профессия подолога.
+      </div>
       <div class="program-grid">
         <div class="day-col fade-up">
-          <div class="day-header">📋 День 1 · Теория и понимание</div>
+          <div class="day-header" id="day1_header">📋 День 1 · Теория и понимание</div>
           <div class="day-list">
-            <div class="day-item"><span class="dot dot-blue"></span>Подология vs обычный педикюр: в чём разница</div>
-            <div class="day-item"><span class="dot dot-blue"></span>Анатомия стопы, кожи и ногтевой пластины</div>
-            <div class="day-item"><span class="dot dot-blue"></span>Строение и жизненный цикл ногтя</div>
-            <div class="day-item"><span class="dot dot-red"></span>Онихолизис: что это, как выглядит, почему возникает
-            </div>
-            <div class="day-item"><span class="dot dot-blue"></span>Частые состояния ногтя — разбор случаев</div>
-            <div class="day-item"><span class="dot dot-blue"></span>Когда подолог работает, когда направляет к врачу
-            </div>
+            <div class="day-item"><span class="dot dot-blue"></span><span id="day1_i1">Подология vs обычный педикюр: в чём разница</span></div>
+            <div class="day-item"><span class="dot dot-blue"></span><span id="day1_i2">Анатомия стопы, кожи и ногтевой пластины</span></div>
+            <div class="day-item"><span class="dot dot-blue"></span><span id="day1_i3">Строение и жизненный цикл ногтя</span></div>
+            <div class="day-item"><span class="dot dot-red"></span><span id="day1_i4">Онихолизис: что это, как выглядит, почему возникает</span></div>
+            <div class="day-item"><span class="dot dot-blue"></span><span id="day1_i5">Частые состояния ногтя — разбор случаев</span></div>
+            <div class="day-item"><span class="dot dot-blue"></span><span id="day1_i6">Когда подолог работает, когда направляет к врачу</span></div>
           </div>
         </div>
         <div class="day-col fade-up" style="transition-delay:.15s">
-          <div class="day-header">🔬 День 2 · Практика на моделях</div>
+          <div class="day-header" id="day2_header">🔬 День 2 · Практика на моделях</div>
           <div class="day-list">
-            <div class="day-item"><span class="dot dot-blue"></span>Аппарат для педикюра: техника и безопасность</div>
-            <div class="day-item"><span class="dot dot-blue"></span>Ручные инструменты подолога</div>
-            <div class="day-item"><span class="dot dot-red"></span>Работа с онихолизисом на живых моделях</div>
-            <div class="day-item"><span class="dot dot-blue"></span>Обработка утолщённого ногтя и гиперкератоза</div>
-            <div class="day-item"><span class="dot dot-blue"></span>Что делать, когда что-то пошло не так</div>
-            <div class="day-item"><span class="dot dot-blue"></span>Протокол безопасной работы подолога</div>
+            <div class="day-item"><span class="dot dot-blue"></span><span id="day2_i1">Аппарат для педикюра: техника и безопасность</span></div>
+            <div class="day-item"><span class="dot dot-blue"></span><span id="day2_i2">Ручные инструменты подолога</span></div>
+            <div class="day-item"><span class="dot dot-red"></span><span id="day2_i3">Работа с онихолизисом на живых моделях</span></div>
+            <div class="day-item"><span class="dot dot-blue"></span><span id="day2_i4">Обработка утолщённого ногтя и гиперкератоза</span></div>
+            <div class="day-item"><span class="dot dot-blue"></span><span id="day2_i5">Что делать, когда что-то пошло не так</span></div>
+            <div class="day-item"><span class="dot dot-blue"></span><span id="day2_i6">Протокол безопасной работы подолога</span></div>
           </div>
-          <div class="practice-note">⏱ Половина времени — живая практика на моделях</div>
+          <div class="practice-note" id="day2_note">⏱ Половина времени — живая практика на моделях</div>
         </div>
       </div>
     </div>
@@ -272,96 +278,96 @@
             <div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div>
             <div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div>
           </div>
-          <div class="case-name">Онихолизис</div>
-          <div class="case-desc">Пациентка 34 л. Отслоение после травмы. 2 сеанса.</div>
+          <div class="case-name" id="case1_name">Онихолизис</div>
+          <div class="case-desc" id="case1_desc">Пациентка 34 л. Отслоение после травмы. 2 сеанса.</div>
         </div>
         <div class="case-card fade-up" style="transition-delay:.06s">
           <div class="before-after">
             <div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div>
             <div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div>
           </div>
-          <div class="case-name">Онихокриптоз</div>
-          <div class="case-desc">Пациент 47 л. После двух неудачных лечений.</div>
+          <div class="case-name" id="case2_name">Онихокриптоз</div>
+          <div class="case-desc" id="case2_desc">Пациент 47 л. После двух неудачных лечений.</div>
         </div>
         <div class="case-card fade-up" style="transition-delay:.12s">
           <div class="before-after">
             <div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div>
             <div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div>
           </div>
-          <div class="case-name">Гиперкератоз</div>
-          <div class="case-desc">Пациентка 39 л. Хронический гиперкератоз пяток.</div>
+          <div class="case-name" id="case3_name">Гиперкератоз</div>
+          <div class="case-desc" id="case3_desc">Пациентка 39 л. Хронический гиперкератоз пяток.</div>
         </div>
         <div class="case-card fade-up" style="transition-delay:.18s">
           <div class="before-after">
             <div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div>
             <div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div>
           </div>
-          <div class="case-name">Онихомикоз</div>
-          <div class="case-desc">Пациентка 58 л. Длительное неправильное лечение.</div>
+          <div class="case-name" id="case4_name">Онихомикоз</div>
+          <div class="case-desc" id="case4_desc">Пациентка 58 л. Длительное неправильное лечение.</div>
         </div>
         <div class="case-card fade-up">
           <div class="before-after">
             <div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div>
             <div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div>
           </div>
-          <div class="case-name">Деформация ногтя</div>
-          <div class="case-desc">Пациент 52 л. Травматическая деформация.</div>
+          <div class="case-name" id="case5_name">Деформация ногтя</div>
+          <div class="case-desc" id="case5_desc">Пациент 52 л. Травматическая деформация.</div>
         </div>
         <div class="case-card fade-up" style="transition-delay:.06s">
           <div class="before-after">
             <div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div>
             <div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div>
           </div>
-          <div class="case-name">Утолщённый ноготь</div>
-          <div class="case-desc">Пациент 61 л. Многолетнее утолщение. 1 сеанс.</div>
+          <div class="case-name" id="case6_name">Утолщённый ноготь</div>
+          <div class="case-desc" id="case6_desc">Пациент 61 л. Многолетнее утолщение. 1 сеанс.</div>
         </div>
         <div class="case-card fade-up" style="transition-delay:.12s">
           <div class="before-after">
             <div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div>
             <div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div>
           </div>
-          <div class="case-name">Вросший ноготь</div>
-          <div class="case-desc">Пациент 33 л. Рецидив после хирургии.</div>
+          <div class="case-name" id="case7_name">Вросший ноготь</div>
+          <div class="case-desc" id="case7_desc">Пациент 33 л. Рецидив после хирургии.</div>
         </div>
         <div class="case-card fade-up" style="transition-delay:.18s">
           <div class="before-after">
             <div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div>
             <div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div>
           </div>
-          <div class="case-name">Диабетическая стопа</div>
-          <div class="case-desc">Пациентка 61 л. Безопасный протокол работы.</div>
+          <div class="case-name" id="case8_name">Диабетическая стопа</div>
+          <div class="case-desc" id="case8_desc">Пациентка 61 л. Безопасный протокол работы.</div>
         </div>
         <div class="case-card fade-up">
           <div class="before-after">
             <div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div>
             <div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div>
           </div>
-          <div class="case-name">Онихолизис после гель-лака</div>
-          <div class="case-desc">Пациентка 28 л. Повреждение от покрытия.</div>
+          <div class="case-name" id="case9_name">Онихолизис после гель-лака</div>
+          <div class="case-desc" id="case9_desc">Пациентка 28 л. Повреждение от покрытия.</div>
         </div>
         <div class="case-card fade-up" style="transition-delay:.06s">
           <div class="before-after">
             <div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div>
             <div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div>
           </div>
-          <div class="case-name">Птеригий ногтя</div>
-          <div class="case-desc">Пациентка 45 л. Длительное запущение.</div>
+          <div class="case-name" id="case10_name">Птеригий ногтя</div>
+          <div class="case-desc" id="case10_desc">Пациентка 45 л. Длительное запущение.</div>
         </div>
         <div class="case-card fade-up" style="transition-delay:.12s">
           <div class="before-after">
             <div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div>
             <div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div>
           </div>
-          <div class="case-name">Натоптыши</div>
-          <div class="case-desc">Пациентка 50 л. Разгрузка зон давления.</div>
+          <div class="case-name" id="case11_name">Натоптыши</div>
+          <div class="case-desc" id="case11_desc">Пациентка 50 л. Разгрузка зон давления.</div>
         </div>
         <div class="case-card fade-up" style="transition-delay:.18s">
           <div class="before-after">
             <div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div>
             <div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div>
           </div>
-          <div class="case-name">Ксантонихия</div>
-          <div class="case-desc">Пациент 67 л. Изменение цвета пластины.</div>
+          <div class="case-name" id="case12_name">Ксантонихия</div>
+          <div class="case-desc" id="case12_desc">Пациент 67 л. Изменение цвета пластины.</div>
         </div>
       </div>
     </div>
@@ -381,68 +387,68 @@
           <div class="review-card fade-up">
             <div class="review-stars">★★★★★</div>
             <div class="review-quotes">❝❞</div>
-            <div class="review-text">Честно, шла с большими сомнениями — думала, что мне как мастеру это всё слишком
+            <div class="review-text" id="rev1_text">Честно, шла с большими сомнениями — думала, что мне как мастеру это всё слишком
               сложно. Но уже в первый день поняла, что нет. Анна Геннадьевна объясняет так, что даже непонятные вещи
               становятся логичными.</div>
-            <div class="review-author">Марина, 34 года</div>
-            <div class="review-role">Мастер педикюра · Москва</div>
+            <div class="review-author" id="rev1_author">Марина, 34 года</div>
+            <div class="review-role" id="rev1_role">Мастер педикюра · Москва</div>
           </div>
           <div class="review-card fade-up" style="transition-delay:.1s">
             <div class="review-stars">★★★★★</div>
             <div class="review-quotes">❝❞</div>
-            <div class="review-text">Топ. Практика на моделях — это вообще отдельная история, такого нигде не видела на
+            <div class="review-text" id="rev2_text">Топ. Практика на моделях — это вообще отдельная история, такого нигде не видела на
               курсах. Работаешь руками, рядом стоит преподаватель и сразу говорит, что не так. Это дорогого стоит.</div>
-            <div class="review-author">Алина, 28 лет</div>
-            <div class="review-role">Мастер ногтевого сервиса · Краснодар</div>
+            <div class="review-author" id="rev2_author">Алина, 28 лет</div>
+            <div class="review-role" id="rev2_role">Мастер ногтевого сервиса · Краснодар</div>
           </div>
           <div class="review-card fade-up" style="transition-delay:.2s">
             <div class="review-stars">★★★★★</div>
             <div class="review-quotes">❝❞</div>
-            <div class="review-text">Работаю в этой сфере уже 9 лет. Думала, что семинар — это просто повторение.
+            <div class="review-text" id="rev3_text">Работаю в этой сфере уже 9 лет. Думала, что семинар — это просто повторение.
               Ошиблась. Особенно сильно ударил блок про онихолизис — оказывается, я несколько лет делала это не совсем
               правильно.</div>
-            <div class="review-author">Наталья, 41 год</div>
-            <div class="review-role">Подолог · Санкт-Петербург</div>
+            <div class="review-author" id="rev3_author">Наталья, 41 год</div>
+            <div class="review-role" id="rev3_role">Подолог · Санкт-Петербург</div>
           </div>
           <div class="review-card fade-up">
             <div class="review-stars">★★★★★</div>
             <div class="review-quotes">❝❞</div>
-            <div class="review-text">Очень понравилось. Информации много, но она не перегружает — всё структурировано и
+            <div class="review-text" id="rev4_text">Очень понравилось. Информации много, но она не перегружает — всё структурировано и
               понятно зачем. Уже думаю о годовом курсе.</div>
-            <div class="review-author">Кристина, 26 лет</div>
-            <div class="review-role">Начинающий подолог · Алматы</div>
+            <div class="review-author" id="rev4_author">Кристина, 26 лет</div>
+            <div class="review-role" id="rev4_role">Начинающий подолог · Алматы</div>
           </div>
           <div class="review-card fade-up" style="transition-delay:.1s">
             <div class="review-stars">★★★★★</div>
             <div class="review-quotes">❝❞</div>
-            <div class="review-text">После семинара подняла цены на медицинский педикюр. Теперь я могу объяснить
+            <div class="review-text" id="rev5_text">После семинара подняла цены на медицинский педикюр. Теперь я могу объяснить
               клиенту, что именно делаю и почему — это совсем другой разговор.</div>
-            <div class="review-author">Ирина, 37 лет</div>
-            <div class="review-role">Мастер медицинского педикюра · Рига</div>
+            <div class="review-author" id="rev5_author">Ирина, 37 лет</div>
+            <div class="review-role" id="rev5_role">Мастер медицинского педикюра · Рига</div>
           </div>
           <div class="review-card fade-up" style="transition-delay:.2s">
             <div class="review-stars">★★★★★</div>
             <div class="review-quotes">❝❞</div>
-            <div class="review-text">Хороший семинар, материал реально полезный. Анна Геннадьевна отвечала на все
+            <div class="review-text" id="rev6_text">Хороший семинар, материал реально полезный. Анна Геннадьевна отвечала на все
               вопросы, даже самые «странные». Буду рекомендовать коллегам.</div>
-            <div class="review-author">Екатерина, 30 лет</div>
-            <div class="review-role">Подолог · Тбилиси</div>
+            <div class="review-author" id="rev6_author">Екатерина, 30 лет</div>
+            <div class="review-role" id="rev6_role">Подолог · Тбилиси</div>
           </div>
           <div class="review-card fade-up" style="transition-delay:.2s">
             <div class="review-stars">★★★★★</div>
             <div class="review-quotes">❝❞</div>
-            <div class="review-text">Я пришла как мастер с опытом, но без базы в подологии. За два дня получила именно
+            <div class="review-text" id="rev7_text">Я пришла как мастер с опытом, но без базы в подологии. За два дня получила именно
               то, чего не хватало — понимание того, что происходит с ногтём и стопой. Раньше я просто делала. Теперь я
               понимаю, что делаю. Это очень разные вещи, как оказалось.</div>
-            <div class="review-author">Светлана, 44 года</div>
-            <div class="review-role">Мастер педикюра · Минск</div>
+            <div class="review-author" id="rev7_author">Светлана, 44 года</div>
+            <div class="review-role" id="rev7_role">Мастер педикюра · Минск</div>
           </div>
           <div class="review-card fade-up" style="transition-delay:.2s">
             <div class="review-stars">★★★★★</div>
             <div class="review-quotes">❝❞</div>
-            <div class="review-text">Приехала из другого города специально. Не пожалела ни разу. Спасибо!</div>
-            <div class="review-author">Виктория, 32 года</div>
-            <div class="review-role">Мастер педикюра · Киев</div>
+            <div class="review-text" id="rev8_text">Приехала из другого города специально. Не пожалела ни разу. Спасибо!</div>
+            <div class="review-author" id="rev8_author">Виктория, 32 года</div>
+            <div class="review-role" id="rev8_role">Мастер педикюра · Киев</div>
           </div>
         </div>
       </div>
@@ -455,7 +461,8 @@
       <div>
         <div class="next-badge" id="next_badge">🎓 Следующий уровень</div>
         <div class="section-title" id="next_title">Этот семинар — только <span class="accent">начало пути</span></div>
-        <p class="next-desc" id="next_desc">После него вы получаете фундамент и систему мышления. Для тех, кто хочет стать
+        <p class="next-desc" id="next_desc">После него вы получаете фундамент и систему мышления. Для тех, кто хочет
+          стать
           профессиональным подологом — мы готовим большой годовой курс.</p>
         <a href="#form" class="btn-blue" id="next_btn">Узнать о годовом курсе первым →</a>
       </div>
@@ -463,15 +470,15 @@
         <div class="path-step active">
           <div class="step-num">1</div>
           <div>
-            <div class="step-title">Медицинский педикюр. Основы подологии</div>
-            <div class="step-sub">Вы здесь · 2 дня · 16 часов</div>
+            <div class="step-title" id="step1_title">Медицинский педикюр. Основы подологии</div>
+            <div class="step-sub" id="step1_sub">Вы здесь · 2 дня · 16 часов</div>
           </div>
         </div>
         <div class="path-step">
           <div class="step-num">2</div>
           <div>
-            <div class="step-title">Профессиональный курс подологии</div>
-            <div class="step-sub">Скоро · Годовая программа · Онлайн + оффлайн</div>
+            <div class="step-title" id="step2_title">Профессиональный курс подологии</div>
+            <div class="step-sub" id="step2_sub">Скоро · Годовая программа · Онлайн + оффлайн</div>
           </div>
         </div>
       </div>
@@ -485,36 +492,36 @@
       <div class="section-title" id="pr_title">Выберите поток</div>
       <div class="pricing-cards">
         <div class="price-card featured fade-up">
-          <span class="recommend-badge">⭐ Рекомендуем</span>
-          <div class="price-date">16–17 мая · Будва</div>
-          <div class="price-amount">€350</div>
-          <div class="price-sub">16 академических часов · Углублённый формат</div>
+          <span class="recommend-badge" id="pr1_badge">⭐ Рекомендуем</span>
+          <div class="price-date" id="pr1_date">16–17 мая · Будва</div>
+          <div class="price-amount" id="pr1_amount">€350</div>
+          <div class="price-sub" id="pr1_sub">16 академических часов · Углублённый формат</div>
           <ul class="price-features">
-            <li><span class="pcheck">✓</span>Полная программа теории и практики</li>
-            <li><span class="pcheck">✓</span>Практика на живых моделях</li>
-            <li><span class="pcheck">✓</span>Разбор клинических случаев</li>
-            <li><span class="pcheck">✓</span>Сертификат подолога iPODO</li>
-            <li><span class="pcheck">✓</span>Поддержка после обучения</li>
-            <li><span class="pcheck">✓</span>Методические материалы</li>
+            <li><span class="pcheck">✓</span><span id="pr1_f1">Полная программа теории и практики</span></li>
+            <li><span class="pcheck">✓</span><span id="pr1_f2">Практика на живых моделях</span></li>
+            <li><span class="pcheck">✓</span><span id="pr1_f3">Разбор клинических случаев</span></li>
+            <li><span class="pcheck">✓</span><span id="pr1_f4">Сертификат подолога iPODO</span></li>
+            <li><span class="pcheck">✓</span><span id="pr1_f5">Поддержка после обучения</span></li>
+            <li><span class="pcheck">✓</span><span id="pr1_f6">Методические материалы</span></li>
           </ul>
           <a href="https://wa.me/38267417580?text=Хочу%20забронировать%20место%20на%20семинар%20iPODO"
             class="btn-price btn-price-blue">Забронировать место →</a>
-          <div class="seats-note">⚡ Осталось 5 мест</div>
+          <div class="seats-note" id="pr1_seats">⚡ Осталось 5 мест</div>
         </div>
         <div class="price-card fade-up" style="transition-delay:.15s">
-          <div class="price-date">13–14 мая · Будва</div>
-          <div class="price-amount">€290</div>
-          <div class="price-sub">12 академических часов · Базовый формат</div>
+          <div class="price-date" id="pr2_date">13–14 мая · Будва</div>
+          <div class="price-amount" id="pr2_amount">€290</div>
+          <div class="price-sub" id="pr2_sub">12 академических часов · Базовый формат</div>
           <ul class="price-features">
-            <li><span class="pcheck">✓</span>Теория и практика подологии</li>
-            <li><span class="pcheck">✓</span>Практика на живых моделях</li>
-            <li><span class="pcheck">✓</span>Разбор клинических случаев</li>
-            <li><span class="pcheck">✓</span>Сертификат подолога iPODO</li>
-            <li><span class="pcheck">✓</span>Поддержка после обучения</li>
+            <li><span class="pcheck">✓</span><span id="pr2_f1">Теория и практика подологии</span></li>
+            <li><span class="pcheck">✓</span><span id="pr2_f2">Практика на живых моделях</span></li>
+            <li><span class="pcheck">✓</span><span id="pr2_f3">Разбор клинических случаев</span></li>
+            <li><span class="pcheck">✓</span><span id="pr2_f4">Сертификат подолога iPODO</span></li>
+            <li><span class="pcheck">✓</span><span id="pr2_f5">Поддержка после обучения</span></li>
           </ul>
           <a href="https://wa.me/38267417580?text=Хочу%20забронировать%20место%20на%20семинар%20iPODO"
             class="btn-price btn-price-black">Забронировать место →</a>
-          <div class="seats-note">⚡ Осталось 3 места</div>
+          <div class="seats-note" id="pr2_seats">⚡ Осталось 3 места</div>
         </div>
       </div>
     </div>
@@ -531,45 +538,45 @@
         </div>
         <div class="faq-list">
           <div class="faq-item" onclick="toggleFaq(this)">
-            <div class="faq-q">Нужен ли опыт в подологии? <span class="faq-arrow">↓</span></div>
+            <div class="faq-q"><span id="faq1_q_text">Нужен ли опыт в подологии?</span> <span class="faq-arrow">↓</span></div>
             <div class="faq-a">
-              <div class="faq-a-inner">Нет. Семинар для мастеров педикюра с любым уровнем — от новичков до тех, кто уже
+              <div class="faq-a-inner" id="faq1_a">Нет. Семинар для мастеров педикюра с любым уровнем — от новичков до тех, кто уже
                 работает с медицинским педикюром. Всё объясняется с нуля, системно.</div>
             </div>
           </div>
           <div class="faq-item" onclick="toggleFaq(this)">
-            <div class="faq-q">Что значит «практика на живых моделях»? <span class="faq-arrow">↓</span></div>
+            <div class="faq-q"><span id="faq2_q_text">Что значит «практика на живых моделях»?</span> <span class="faq-arrow">↓</span></div>
             <div class="faq-a">
-              <div class="faq-a-inner">На второй день вы работаете руками — с аппаратом и ручными инструментами — на
+              <div class="faq-a-inner" id="faq2_a">На второй день вы работаете руками — с аппаратом и ручными инструментами — на
                 реальных людях под контролем преподавателя. Не демонстрация, а ваша личная отработка.</div>
             </div>
           </div>
           <div class="faq-item" onclick="toggleFaq(this)">
-            <div class="faq-q">Что такое онихолизис и почему такой акцент? <span class="faq-arrow">↓</span></div>
+            <div class="faq-q"><span id="faq3_q_text">Что такое онихолизис и почему такой акцент?</span> <span class="faq-arrow">↓</span></div>
             <div class="faq-a">
-              <div class="faq-a-inner">Онихолизис — отслоение ногтевой пластины от ложа. Одно из самых частых состояний,
+              <div class="faq-a-inner" id="faq3_a">Онихолизис — отслоение ногтевой пластины от ложа. Одно из самых частых состояний,
                 с которым мастера сталкиваются, но не умеют правильно определить. Именно поэтому половина практики
                 посвящена ему.</div>
             </div>
           </div>
           <div class="faq-item" onclick="toggleFaq(this)">
-            <div class="faq-q">Какой сертификат я получу? <span class="faq-arrow">↓</span></div>
+            <div class="faq-q"><span id="faq4_q_text">Какой сертификат я получу?</span> <span class="faq-arrow">↓</span></div>
             <div class="faq-a">
-              <div class="faq-a-inner">Сертификат специалиста iPODO expert lab о прохождении семинара «Медицинский
+              <div class="faq-a-inner" id="faq4_a">Сертификат специалиста iPODO expert lab о прохождении семинара «Медицинский
                 педикюр. Основы подологии».</div>
             </div>
           </div>
           <div class="faq-item" onclick="toggleFaq(this)">
-            <div class="faq-q">Есть ли продолжение? <span class="faq-arrow">↓</span></div>
+            <div class="faq-q"><span id="faq5_q_text">Есть ли продолжение?</span> <span class="faq-arrow">↓</span></div>
             <div class="faq-a">
-              <div class="faq-a-inner">Да. Семинар — это первый шаг. Мы готовим годовой курс подологии. Участники
+              <div class="faq-a-inner" id="faq5_a">Да. Семинар — это первый шаг. Мы готовим годовой курс подологии. Участники
                 семинара узнают о нём первыми и получают приоритет при записи.</div>
             </div>
           </div>
           <div class="faq-item" onclick="toggleFaq(this)">
-            <div class="faq-q">Чем отличаются два потока? <span class="faq-arrow">↓</span></div>
+            <div class="faq-q"><span id="faq6_q_text">Чем отличаются два потока?</span> <span class="faq-arrow">↓</span></div>
             <div class="faq-a">
-              <div class="faq-a-inner">Поток €350 — углублённый, 16 часов, больше практики и методические материалы.
+              <div class="faq-a-inner" id="faq6_a">Поток €350 — углублённый, 16 часов, больше практики и методические материалы.
                 Поток €290 — базовый, 12 часов, полная программа без дополнительных материалов.</div>
             </div>
           </div>
@@ -582,7 +589,8 @@
   <section class="cta-bottom" id="form">
     <div class="container">
       <h2 id="cta_h2">Начните работать как <span class="accent">настоящий подолог</span></h2>
-      <p class="cta-sub" id="cta_sub">2 дня — и вы перестанете гадать. Будете понимать, что видите, и знать, что с этим делать.</p>
+      <p class="cta-sub" id="cta_sub">2 дня — и вы перестанете гадать. Будете понимать, что видите, и знать, что с этим
+        делать.</p>
       <div>
         <div class="cta-badge" id="cta_badge">⚡ Всего 8 мест на оба потока</div>
       </div>
@@ -593,14 +601,13 @@
           <input class="form-field" type="tel" id="fphone" placeholder="Телефон / Viber">
           <div class="stream-pick">
             <label class="stream-opt selected-opt"><input type="radio" name="stream"
-                value="16-17 мая · €350 · Углублённый" checked><span>16–17 мая · <strong>€350</strong> ·
-                Углублённый</span></label>
-            <label class="stream-opt"><input type="radio" name="stream" value="13-14 мая · €290 · Базовый"><span>13–14
-                мая · <strong>€290</strong> · Базовый</span></label>
+                value="16-17 мая · €350 · Углублённый" checked><span id="form_stream1_label">16–17 мая · <strong>€350</strong> · Углублённый</span></label>
+            <label class="stream-opt"><input type="radio" name="stream" value="13-14 мая · €290 · Базовый"><span id="form_stream2_label">13–14 мая · <strong>€290</strong> · Базовый</span></label>
           </div>
         </div>
         <button class="btn-submit-main" id="submitBtn" onclick="submitForm()">Отправить заявку →</button>
-        <p class="form-privacy-note" id="form_privacy">После отправки — письмо с деталями придёт на ваш email.<br>Менеджер свяжется в
+        <p class="form-privacy-note" id="form_privacy">После отправки — письмо с деталями придёт на ваш
+          email.<br>Менеджер свяжется в
           течение 15 минут.</p>
       </div>
       <div id="formSuccess" style="display:none;text-align:center">
@@ -641,10 +648,10 @@
         <div class="footer-copy" id="footer_copy">© 2025 iPODO expert lab. Все права защищены.</div>
       </div>
       <div class="footer-nav">
-        <a href="#program">Программа</a>
-        <a href="#teacher">О преподавателе</a>
-        <a href="#reviews">Отзывы</a>
-        <a href="#pricing">Цены</a>
+        <a href="#program" id="footer_nav_program">Программа</a>
+        <a href="#teacher" id="footer_nav_teacher">О преподавателе</a>
+        <a href="#reviews" id="footer_nav_reviews">Отзывы</a>
+        <a href="#pricing" id="footer_nav_pricing">Цены</a>
       </div>
     </div>
   </footer>
@@ -655,8 +662,9 @@
     <a href="https://wa.me/38267417580?text=Хочу%20забронировать%20место%20на%20семинар%20iPODO" class="sticky-right"
       target="_blank" id="sticky_right">Забронировать место →</a>
   </div>
-
+  <script src="translations.js"></script>
   <script src="script.js"></script>
+  <script src="init-lang.js"></script>
 </body>
 
 </html>
