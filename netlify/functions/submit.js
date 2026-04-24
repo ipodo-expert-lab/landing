@@ -18,10 +18,16 @@ exports.handler = async (event) => {
         }),
       },
     );
-    const { access_token } = await tokenRes.json();
+    const tokenData = await tokenRes.json();
+    const access_token = tokenData.access_token;
     console.log("Token received:", access_token ? "YES" : "NO");
+    if (!access_token) {
+      console.error("Token error:", JSON.stringify(tokenData));
+      return { statusCode: 500, body: JSON.stringify({ error: "No token" }) };
+    }
 
-    await fetch("https://api.sendpulse.com/crm/v1/contacts", {
+    // CRM contact
+    const crmRes = await fetch("https://api.sendpulse.com/crm/v1/contacts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,8 +35,11 @@ exports.handler = async (event) => {
       },
       body: JSON.stringify({ name, email, phone, description: stream }),
     });
+    const crmData = await crmRes.json();
+    console.log("CRM response:", JSON.stringify(crmData));
 
-    await fetch("https://api.sendpulse.com/smtp/emails", {
+    // Email to client
+    const clientEmailRes = await fetch("https://api.sendpulse.com/smtp/emails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -63,8 +72,11 @@ exports.handler = async (event) => {
         },
       }),
     });
+    const clientEmailData = await clientEmailRes.json();
+    console.log("Client email response:", JSON.stringify(clientEmailData));
 
-    await fetch("https://api.sendpulse.com/smtp/emails", {
+    // Email to admin
+    const adminEmailRes = await fetch("https://api.sendpulse.com/smtp/emails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -74,7 +86,7 @@ exports.handler = async (event) => {
         email: {
           subject: `Новая заявка: ${name} · ${stream}`,
           html: `<div style="font-family:sans-serif;max-width:480px">
-            <h2 style="color:#0D0F14"> Новая заявка на семинар</h2>
+            <h2 style="color:#0D0F14">Новая заявка на семинар</h2>
             <table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:16px">
               <tr><td style="padding:10px;border-bottom:1px solid #eee;color:#888;width:100px">Имя</td><td style="padding:10px;border-bottom:1px solid #eee;font-weight:600">${name}</td></tr>
               <tr><td style="padding:10px;border-bottom:1px solid #eee;color:#888">Email</td><td style="padding:10px;border-bottom:1px solid #eee">${email}</td></tr>
@@ -87,6 +99,8 @@ exports.handler = async (event) => {
         },
       }),
     });
+    const adminEmailData = await adminEmailRes.json();
+    console.log("Admin email response:", JSON.stringify(adminEmailData));
 
     return { statusCode: 200, body: JSON.stringify({ ok: true }) };
   } catch (err) {
