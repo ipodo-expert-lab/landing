@@ -370,6 +370,29 @@
           <div class="case-desc" id="case12_desc">Пациент 67 л. Изменение цвета пластины.</div>
         </div>
       </div>
+
+      <!-- MOBILE SLIDER (hidden on desktop) -->
+      <div class="cases-slider-wrap">
+        <div class="cases-slider" id="casesSlider">
+          <div class="case-card"><div class="before-after"><div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div><div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div></div><div class="case-name" id="s_case1_name">Онихолизис</div><div class="case-desc" id="s_case1_desc">Пациентка 34 л. Отслоение после травмы. 2 сеанса.</div></div>
+          <div class="case-card"><div class="before-after"><div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div><div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div></div><div class="case-name" id="s_case2_name">Онихокриптоз</div><div class="case-desc" id="s_case2_desc">Пациент 47 л. После двух неудачных лечений.</div></div>
+          <div class="case-card"><div class="before-after"><div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div><div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div></div><div class="case-name" id="s_case3_name">Гиперкератоз</div><div class="case-desc" id="s_case3_desc">Пациентка 39 л. Хронический гиперкератоз пяток.</div></div>
+          <div class="case-card"><div class="before-after"><div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div><div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div></div><div class="case-name" id="s_case4_name">Онихомикоз</div><div class="case-desc" id="s_case4_desc">Пациентка 58 л. Длительное неправильное лечение.</div></div>
+          <div class="case-card"><div class="before-after"><div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div><div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div></div><div class="case-name" id="s_case5_name">Деформация ногтя</div><div class="case-desc" id="s_case5_desc">Пациент 52 л. Травматическая деформация.</div></div>
+          <div class="case-card"><div class="before-after"><div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div><div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div></div><div class="case-name" id="s_case6_name">Утолщённый ноготь</div><div class="case-desc" id="s_case6_desc">Пациент 61 л. Многолетнее утолщение. 1 сеанс.</div></div>
+          <div class="case-card"><div class="before-after"><div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div><div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div></div><div class="case-name" id="s_case7_name">Вросший ноготь</div><div class="case-desc" id="s_case7_desc">Пациент 33 л. Рецидив после хирургии.</div></div>
+          <div class="case-card"><div class="before-after"><div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div><div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div></div><div class="case-name" id="s_case8_name">Диабетическая стопа</div><div class="case-desc" id="s_case8_desc">Пациентка 61 л. Безопасный протокол работы.</div></div>
+          <div class="case-card"><div class="before-after"><div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div><div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div></div><div class="case-name" id="s_case9_name">Онихолизис после гель-лака</div><div class="case-desc" id="s_case9_desc">Пациентка 28 л. Повреждение от покрытия.</div></div>
+          <div class="case-card"><div class="before-after"><div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div><div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div></div><div class="case-name" id="s_case10_name">Птеригий ногтя</div><div class="case-desc" id="s_case10_desc">Пациентка 45 л. Длительное запущение.</div></div>
+          <div class="case-card"><div class="before-after"><div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div><div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div></div><div class="case-name" id="s_case11_name">Натоптыши</div><div class="case-desc" id="s_case11_desc">Пациентка 50 л. Разгрузка зон давления.</div></div>
+          <div class="case-card"><div class="before-after"><div class="ba-img"><span class="ba-icon">📷</span><span>До</span></div><div class="ba-img after"><span class="ba-icon">✦</span><span>После</span></div></div><div class="case-name" id="s_case12_name">Ксантонихия</div><div class="case-desc" id="s_case12_desc">Пациент 67 л. Изменение цвета пластины.</div></div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="sliderPrev" onclick="slideCases(-1)">←</button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="sliderNext" onclick="slideCases(1)">→</button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -662,6 +685,9 @@
     <a href="https://wa.me/38267417580?text=Хочу%20забронировать%20место%20на%20семинар%20iPODO" class="sticky-right"
       target="_blank" id="sticky_right">Забронировать место →</a>
   </div>
+
+
+  <script src="slider.js"></script>
   <script src="translations.js"></script>
   <script src="script.js"></script>
   <script src="init-lang.js"></script>

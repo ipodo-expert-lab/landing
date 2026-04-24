@@ -240,6 +240,12 @@ function applyLang(lang) {
   setText('footer_nav_program', t.footer_nav_program); setText('footer_nav_teacher', t.footer_nav_teacher); setText('footer_nav_reviews', t.footer_nav_reviews); setText('footer_nav_pricing', t.footer_nav_pricing);
   setText('sticky_left', t.sticky_left); setText('sticky_right', t.sticky_right);
 
+
+  // SLIDER CASES (mobile)
+  for (let i = 1; i <= 12; i++) {
+    setText('s_case'+i+'_name', t['case'+i+'_name']);
+    setText('s_case'+i+'_desc', t['case'+i+'_desc']);
+  }
   // CASES
   for (let i = 1; i <= 12; i++) {
     setText('case'+i+'_name', t['case'+i+'_name']);
