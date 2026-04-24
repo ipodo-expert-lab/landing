@@ -1964,4 +1964,31 @@ footer {
   body {
     padding-bottom: 70px;
   }
+}/* Lang switcher */
+.lang-switcher {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.6);
+  font-family: 'Onest', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.05em;
+}
+.lang-btn:hover {
+  color: #fff;
+  border-color: rgba(255,255,255,0.5);
+}
+.lang-btn.lang-active {
+  background: #6B8CFF;
+  border-color: #6B8CFF;
+  color: #fff;
 }
