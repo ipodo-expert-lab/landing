@@ -1,34 +1,44 @@
 exports.handler = async (event) => {
-  if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method Not Allowed' };
+  if (event.httpMethod !== "POST") {
+    return { statusCode: 405, body: "Method Not Allowed" };
   }
 
   try {
     const { name, email, phone, stream } = JSON.parse(event.body);
 
-    const tokenRes = await fetch('https://api.sendpulse.com/oauth/access_token', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        grant_type: 'client_credentials',
-        client_id: process.env.SP_CLIENT_ID,
-        client_secret: process.env.SP_CLIENT_SECRET
-      })
-    });
+    const tokenRes = await fetch(
+      "https://api.sendpulse.com/oauth/access_token",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          grant_type: "client_credentials",
+          client_id: process.env.SP_CLIENT_ID,
+          client_secret: process.env.SP_CLIENT_SECRET,
+        }),
+      },
+    );
     const { access_token } = await tokenRes.json();
+    console.log("Token received:", access_token ? "YES" : "NO");
 
-    await fetch('https://api.sendpulse.com/crm/v1/contacts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${access_token}` },
-      body: JSON.stringify({ name, email, phone, description: stream })
+    await fetch("https://api.sendpulse.com/crm/v1/contacts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${access_token}`,
+      },
+      body: JSON.stringify({ name, email, phone, description: stream }),
     });
 
-    await fetch('https://api.sendpulse.com/smtp/emails', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${access_token}` },
+    await fetch("https://api.sendpulse.com/smtp/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${access_token}`,
+      },
       body: JSON.stringify({
         email: {
-          subject: 'Ваша заявка принята — iPODO expert lab',
+          subject: "Ваша заявка принята — iPODO expert lab",
           html: `<div style="font-family:'Helvetica Neue',sans-serif;max-width:560px;margin:0 auto">
             <div style="background:#0D0F14;padding:20px 28px;border-radius:12px 12px 0 0">
               <span style="background:#6B8CFF;color:#fff;font-weight:700;padding:3px 10px;border-radius:6px;font-size:12px">iPODO</span>
@@ -40,7 +50,7 @@ exports.handler = async (event) => {
               <div style="background:#fff;border-radius:10px;padding:18px;margin-bottom:20px;border-left:4px solid #6B8CFF">
                 <p style="margin:0 0 4px;font-size:11px;color:#888;font-weight:700;text-transform:uppercase">Ваш выбор</p>
                 <p style="margin:0;font-size:16px;font-weight:700">${stream}</p>
-                ${phone ? `<p style="margin:6px 0 0;font-size:13px;color:#555">Телефон: ${phone}</p>` : ''}
+                ${phone ? `<p style="margin:6px 0 0;font-size:13px;color:#555">Телефон: ${phone}</p>` : ""}
               </div>
               <a href="viber://chat?number=38267417580" style="display:inline-block;background:#7360f2;color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:700;margin-right:8px">Viber</a>
               <a href="https://t.me/ipodoexpertlab" style="display:inline-block;background:#229ed9;color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:700">Telegram</a>
@@ -48,15 +58,18 @@ exports.handler = async (event) => {
               <p style="color:#aaa;font-size:11px;margin:0">iPODO expert lab · Budva, Montenegro · +382 67 417 580</p>
             </div>
           </div>`,
-          from: { name: 'iPODO expert lab', email: 'ipodoexpert@gmail.com' },
-          to: [{ name, email }]
-        }
-      })
+          from: { name: "iPODO expert lab", email: "ipodoexpert@gmail.com" },
+          to: [{ name, email }],
+        },
+      }),
     });
 
-    await fetch('https://api.sendpulse.com/smtp/emails', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${access_token}` },
+    await fetch("https://api.sendpulse.com/smtp/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${access_token}`,
+      },
       body: JSON.stringify({
         email: {
           subject: `Новая заявка: ${name} · ${stream}`,
@@ -65,20 +78,19 @@ exports.handler = async (event) => {
             <table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:16px">
               <tr><td style="padding:10px;border-bottom:1px solid #eee;color:#888;width:100px">Имя</td><td style="padding:10px;border-bottom:1px solid #eee;font-weight:600">${name}</td></tr>
               <tr><td style="padding:10px;border-bottom:1px solid #eee;color:#888">Email</td><td style="padding:10px;border-bottom:1px solid #eee">${email}</td></tr>
-              <tr><td style="padding:10px;border-bottom:1px solid #eee;color:#888">Телефон</td><td style="padding:10px;border-bottom:1px solid #eee">${phone || '—'}</td></tr>
+              <tr><td style="padding:10px;border-bottom:1px solid #eee;color:#888">Телефон</td><td style="padding:10px;border-bottom:1px solid #eee">${phone || "—"}</td></tr>
               <tr><td style="padding:10px;color:#888">Поток</td><td style="padding:10px;font-weight:700;color:#6B8CFF">${stream}</td></tr>
             </table>
           </div>`,
-          from: { name: 'iPODO expert lab', email: 'ipodoexpert@gmail.com' },
-          to: [{ name: 'Admin', email: 'ipodoexpert@gmail.com' }]
-        }
-      })
+          from: { name: "iPODO expert lab", email: "ipodoexpert@gmail.com" },
+          to: [{ name: "Admin", email: "ipodoexpert@gmail.com" }],
+        },
+      }),
     });
 
     return { statusCode: 200, body: JSON.stringify({ ok: true }) };
-
   } catch (err) {
-    console.error('Function error:', err);
+    console.error("Function error:", err);
     return { statusCode: 500, body: JSON.stringify({ error: err.message }) };
   }
 };
