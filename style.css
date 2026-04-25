@@ -2133,3 +2133,50 @@ footer {
     font-size: 24px;
   }
 }
+
+/* LOGO IMG MOBILE */
+.logo img {
+  height: 36px;
+  width: auto;
+}
+@media (max-width: 480px) {
+  .logo img {
+    height: 24px;
+  }
+}
+
+/* ══ FORM SUCCESS / ERROR ══ */
+.form-result {
+  text-align: center;
+}
+.form-result-icon {
+  font-size: 52px;
+  margin-bottom: 16px;
+}
+.form-result h3 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.form-result-text {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+.form-error-text {
+  color: #f08370;
+  margin-bottom: 16px;
+}
+.messenger-btns-center {
+  justify-content: center;
+}
+
+/* LOGO IMG */
+.logo img {
+  height: 36px;
+  width: auto;
+}
+@media (max-width: 480px) {
+  .logo img {
+    height: 24px;
+  }
+}
