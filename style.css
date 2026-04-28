@@ -1685,11 +1685,7 @@ footer {
   }
 
   .hero-image-wrap {
-    width: 130px;
-    aspect-ratio: 3/4;
-    float: right;
-    margin: 0 0 12px 14px;
-    border-radius: 14px;
+    display: none;
   }
 
   .hero-img {
@@ -2037,13 +2033,9 @@ footer {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 
-  /* Hero image - full width centered */
+  /* Hero image hidden on mobile */
   .hero-image-wrap {
-    width: 100% !important;
-    max-width: 260px !important;
-    float: none !important;
-    margin: 0 auto !important;
-    aspect-ratio: 3/4;
+    display: none !important;
   }
 }
 
@@ -2220,5 +2212,50 @@ footer {
 @media (max-width: 480px) {
   .logo img {
     height: 24px;
+  }
+}
+/* ══ TEACHER PHOTO BACKGROUND ON MOBILE ══ */
+@media (max-width: 768px) {
+  .teacher-section {
+    background-image: url('./image/speaker.png');
+    background-size: cover;
+    background-position: center 18%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .teacher-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 15, 26, 0.45);
+    z-index: 0;
+  }
+
+  .teacher-inner {
+    position: relative;
+    z-index: 1;
+    gap: 0;
+  }
+
+  .teacher-card {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+    margin-top: 160px;
+  }
+
+  /* Скрыть аватар-кружок */
+  .teacher-card .avatar {
+    display: none;
+  }
+
+  /* Имя и роль на всю ширину */
+  .teacher-header {
+    display: block;
+  }
+
+  .teacher-name {
+    font-size: 18px;
+    margin-bottom: 6px;
   }
 }
