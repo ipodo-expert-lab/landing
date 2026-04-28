@@ -48,34 +48,24 @@ exports.handler = async (event) => {
       body: JSON.stringify({
         email: {
           subject: "Ваша заявка принята — iPODO expert lab",
-          html: `<div style="font-family:'Helvetica Neue',sans-serif;max-width:560px;margin:0 auto">
-            <div style="background:#0D0F14;padding:20px 28px;border-radius:12px 12px 0 0">
-              <span style="background:#6B8CFF;color:#fff;font-weight:700;padding:3px 10px;border-radius:6px;font-size:12px">iPODO</span>
-              <span style="color:#fff;font-size:15px;font-weight:600;margin-left:8px">expert lab</span>
-            </div>
-            <div style="background:#f5f5f5;padding:28px;border-radius:0 0 12px 12px">
-              <h2 style="margin:0 0 12px;font-size:20px">Ваша заявка принята, ${name}!</h2>
-              <p style="color:#555;line-height:1.7;margin-bottom:20px">Менеджер свяжется с вами в течение <strong>15 минут</strong>.</p>
-              <div style="background:#fff;border-radius:10px;padding:18px;margin-bottom:20px;border-left:4px solid #6B8CFF">
-                <p style="margin:0 0 4px;font-size:11px;color:#888;font-weight:700;text-transform:uppercase">Ваш выбор</p>
-                <p style="margin:0;font-size:16px;font-weight:700">${stream}</p>
-                ${phone ? `<p style="margin:6px 0 0;font-size:13px;color:#555">Телефон: ${phone}</p>` : ""}
-              </div>
-              <a href="viber://chat?number=38267417580" style="display:inline-block;background:#7360f2;color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:700;margin-right:8px">Viber</a>
-              <a href="https://t.me/ipodoexpertlab" style="display:inline-block;background:#229ed9;color:#fff;padding:11px 22px;border-radius:8px;text-decoration:none;font-weight:700">Telegram</a>
-              <hr style="border:none;border-top:1px solid #e5e5e5;margin:24px 0">
-              <p style="color:#aaa;font-size:11px;margin:0">iPODO expert lab · Budva, Montenegro · +382 67 417 580</p>
-            </div>
-          </div>`,
           from: { name: "iPODO expert lab", email: "info@ipodoexpertlab.com" },
           to: [{ name, email }],
+          text: `Здравствуйте, ${name}!\n\nВаша заявка на офф-лайн семинар iPODO expert lab принята.\n\nВыбранный поток: ${stream}\n${phone ? `Телефон: ${phone}\n` : ""}Менеджер свяжется с Вами в ближайшее время.\n\nС уважением,\nКоманда iPODO expert lab\n+382-67-417-580\nipodoexpertlab.com`,
+          html: `<div style="font-family:Arial,sans-serif;max-width:520px;margin:0 auto;color:#222;font-size:15px;line-height:1.6">
+            <p>Здравствуйте, ${name}!</p>
+            <p>Ваша заявка на офф-лайн семинар <strong>iPODO expert lab</strong> принята.</p>
+            <p><strong>Выбранный поток:</strong> ${stream}</p>
+            ${phone ? `<p><strong>Телефон:</strong> ${phone}</p>` : ""}
+            <p>Менеджер свяжется с Вами в ближайшее время.</p>
+            <p>С уважением,<br>Команда iPODO expert lab<br>+382-67-417-580<br>ipodoexpertlab.com</p>
+          </div>`,
         },
       }),
     });
     const clientEmailData = await clientEmailRes.json();
     console.log("Client email response:", JSON.stringify(clientEmailData));
 
-    // Email to admin
+    // Email to admin (Zoho)
     const adminEmailRes = await fetch("https://api.sendpulse.com/smtp/emails", {
       method: "POST",
       headers: {
@@ -85,17 +75,16 @@ exports.handler = async (event) => {
       body: JSON.stringify({
         email: {
           subject: `Новая заявка: ${name} · ${stream}`,
-          html: `<div style="font-family:sans-serif;max-width:480px">
-            <h2 style="color:#0D0F14">Новая заявка на семинар</h2>
-            <table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:16px">
-              <tr><td style="padding:10px;border-bottom:1px solid #eee;color:#888;width:100px">Имя</td><td style="padding:10px;border-bottom:1px solid #eee;font-weight:600">${name}</td></tr>
-              <tr><td style="padding:10px;border-bottom:1px solid #eee;color:#888">Email</td><td style="padding:10px;border-bottom:1px solid #eee">${email}</td></tr>
-              <tr><td style="padding:10px;border-bottom:1px solid #eee;color:#888">Телефон</td><td style="padding:10px;border-bottom:1px solid #eee">${phone || "—"}</td></tr>
-              <tr><td style="padding:10px;color:#888">Поток</td><td style="padding:10px;font-weight:700;color:#6B8CFF">${stream}</td></tr>
-            </table>
-          </div>`,
           from: { name: "iPODO expert lab", email: "info@ipodoexpertlab.com" },
-          to: [{ name: "Admin", email: "ipodoexpert@gmail.com" }],
+          to: [{ name: "Admin", email: "info@ipodoexpertlab.com" }],
+          text: `Новая заявка на офф-лайн семинар\n\nИмя: ${name}\nEmail: ${email}\nТелефон: ${phone || "—"}\nПоток: ${stream}`,
+          html: `<div style="font-family:Arial,sans-serif;max-width:480px;font-size:14px;color:#222">
+            <h2 style="font-size:18px;margin-bottom:16px">Новая заявка на офф-лайн семинар</h2>
+            <p><strong>Имя:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Телефон:</strong> ${phone || "—"}</p>
+            <p><strong>Поток:</strong> ${stream}</p>
+          </div>`,
         },
       }),
     });
