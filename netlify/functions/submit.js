@@ -4,7 +4,7 @@ exports.handler = async (event) => {
   }
 
   try {
-    const { name, email, phone, stream } = JSON.parse(event.body);
+    const { name, email, phone, stream, lang } = JSON.parse(event.body);
 
     const tokenRes = await fetch(
       "https://api.sendpulse.com/oauth/access_token",
@@ -26,19 +26,22 @@ exports.handler = async (event) => {
       return { statusCode: 500, body: JSON.stringify({ error: "No token" }) };
     }
 
-    // CRM contact
-    const crmRes = await fetch("https://api.sendpulse.com/crm/v1/contacts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${access_token}`,
-      },
-      body: JSON.stringify({ name, email, phone, description: stream }),
-    });
-    const crmData = await crmRes.json();
-    console.log("CRM response:", JSON.stringify(crmData));
+    // Template IDs by language
+    const templateIds = {
+      ru: 87684,  // русский шаблон
+      sr: 87725,  // сербский шаблон
+    };
+    const templateId = templateIds[lang] || templateIds.ru;
+    console.log("Language:", lang, "Template ID:", templateId);
 
-    // Email to client — шаблон SendPulse #87677
+    // Email subjects by language
+    const subjects = {
+      ru: "Ваша заявка принята — iPODO expert lab",
+      sr: "Vaša prijava je primljena — iPODO expert lab",
+    };
+    const subject = subjects[lang] || subjects.ru;
+
+    // Email to client
     const clientEmailRes = await fetch("https://api.sendpulse.com/smtp/emails", {
       method: "POST",
       headers: {
@@ -47,16 +50,16 @@ exports.handler = async (event) => {
       },
       body: JSON.stringify({
         email: {
-          subject: "Ваша заявка принята — iPODO expert lab",
+          subject,
           from: { name: "iPODO expert lab", email: "info@ipodoexpertlab.com" },
           to: [{ name, email }],
           template: {
-            id: 87684,
+            id: templateId,
             variables: {
-              name: name,
-              email: email,
+              name,
+              email,
               phone: phone || "—",
-              stream: stream,
+              stream,
             },
           },
         },
@@ -77,13 +80,14 @@ exports.handler = async (event) => {
           subject: `Новая заявка: ${name} · ${stream}`,
           from: { name: "iPODO expert lab", email: "info@ipodoexpertlab.com" },
           to: [{ name: "Admin", email: "info@ipodoexpertlab.com" }],
-          text: `Новая заявка на офф-лайн семинар\n\nИмя: ${name}\nEmail: ${email}\nТелефон: ${phone || "—"}\nПоток: ${stream}`,
+          text: `Новая заявка на офф-лайн семинар\n\nИмя: ${name}\nEmail: ${email}\nТелефон: ${phone || "—"}\nПоток: ${stream}\nЯзык: ${lang}`,
           html: `<div style="font-family:Arial,sans-serif;max-width:480px;font-size:14px;color:#222">
             <h2 style="font-size:18px;margin-bottom:16px">Новая заявка на офф-лайн семинар</h2>
             <p><strong>Имя:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Телефон:</strong> ${phone || "—"}</p>
             <p><strong>Поток:</strong> ${stream}</p>
+            <p><strong>Язык сайта:</strong> ${lang}</p>
           </div>`,
         },
       }),

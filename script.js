@@ -28,6 +28,7 @@ async function submitForm() {
   const email  = document.getElementById('femail').value.trim();
   const phone  = document.getElementById('fphone').value.trim();
   const stream = document.querySelector('input[name="stream"]:checked').value;
+  const lang   = localStorage.getItem('lang') || 'ru';
   const btn    = document.getElementById('submitBtn');
 
   if (!name || !email) { alert('Пожалуйста, введите имя и email'); return; }
@@ -40,7 +41,7 @@ async function submitForm() {
     const res = await fetch('/.netlify/functions/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, phone, stream })
+      body: JSON.stringify({ name, email, phone, stream, lang })
     });
 
     if (!res.ok) throw new Error();
