@@ -51,7 +51,7 @@ exports.handler = async (event) => {
           from: { name: "iPODO expert lab", email: "info@ipodoexpertlab.com" },
           to: [{ name, email }],
           template: {
-            id: 87677,
+            id: 87684,
             variables: {
               name: name,
               email: email,
