@@ -28,7 +28,7 @@ exports.handler = async (event) => {
 
     // Template IDs by language
     const templateIds = {
-      ru: 87684,  // русский шаблон
+      ru: 87677,  // русский шаблон
       sr: 87725,  // сербский шаблон
     };
     const templateId = templateIds[lang] || templateIds.ru;
