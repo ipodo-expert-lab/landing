@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Политика конфиденциальности · iPODO Expert Lab</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f4f6f9;
+  --white: #ffffff;
+  --dark: #0D0F12;
+  --mid: #4A5568;
+  --light: #718096;
+  --line: #9BB4CC;
+  --accent: #2B5C8A;
+  --blue-bg: #C8D8EC;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  padding: 0 0 80px;
+}
+
+/* HEADER */
+.header {
+  background: var(--blue-bg);
+  border-bottom: 1px solid var(--line);
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo-box {
+  border: 1.5px solid var(--dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+.l-ipodo { font-size: 12px; font-weight: 600; color: var(--dark); letter-spacing: .5px; }
+.l-sub { font-size: 7px; color: var(--mid); line-height: 1.3; }
+
+/* LANGUAGE SWITCHER */
+.lang-switch {
+  display: flex;
+  gap: 4px;
+}
+.lang-btn {
+  padding: 6px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--light);
+  cursor: pointer;
+  transition: all .2s;
+}
+.lang-btn.active {
+  background: var(--dark);
+  color: #fff;
+  border-color: var(--dark);
+}
+.lang-btn:hover:not(.active) {
+  border-color: var(--dark);
+  color: var(--dark);
+}
+
+/* HERO */
+.hero {
+  background: var(--dark);
+  padding: 60px 40px 50px;
+  text-align: center;
+}
+.hero-label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(200,216,236,0.5);
+  margin-bottom: 20px;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.hero-title em { font-style: italic; }
+.hero-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: .5px;
+}
+
+/* CONTENT */
+.content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 48px 40px;
+}
+
+.doc-section {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(155,180,204,0.3);
+}
+.doc-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.section-num {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+.section-body {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.85;
+}
+.section-body p { margin-bottom: 12px; }
+.section-body p:last-child { margin-bottom: 0; }
+.section-body strong { color: var(--dark); font-weight: 500; }
+.section-body ul {
+  margin: 12px 0 12px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.section-body ul li { line-height: 1.7; }
+
+/* INFO BOX */
+.info-box {
+  background: var(--blue-bg);
+  border-left: 3px solid var(--accent);
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.75;
+}
+.info-box strong { color: var(--dark); font-weight: 500; }
+
+/* CONSENT SECTION */
+.consent-block {
+  background: var(--white);
+  border: 1px solid rgba(155,180,204,0.4);
+  padding: 32px;
+  margin-top: 48px;
+}
+.consent-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.consent-title em { font-style: italic; }
+.consent-label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.consent-body {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+.consent-body strong { color: var(--dark); font-weight: 500; }
+.consent-body ul {
+  margin: 10px 0 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* FOOTER */
+.doc-footer {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(155,180,204,0.3);
+  padding-top: 24px;
+  margin-top: 0;
+}
+.df-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: var(--dark);
+}
+.df-meta {
+  font-size: 10px;
+  color: var(--light);
+  letter-spacing: .5px;
+  text-align: right;
+}
+
+/* LANG CONTENT */
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+
+@media (max-width: 600px) {
+  .header { padding: 14px 20px; }
+  .hero { padding: 40px 20px 36px; }
+  .hero-title { font-size: 30px; }
+  .content { padding: 32px 20px; }
+  .doc-footer { padding: 20px 20px 0; flex-direction: column; gap: 12px; text-align: center; }
+  .df-meta { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <a href="https://ipodoexpertlab.com" class="logo-box" style="text-decoration:none;">
+    <span class="l-ipodo">iPODO</span>
+    <span class="l-sub">expert<br>lab</span>
+  </a>
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('ru')">RU</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('me')">MNE</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">iPODO Expert Lab · DOO "AZH MONTENEGRO" - BUDVA</div>
+  <div class="hero-title" id="hero-title">Политика <em>конфиденциальности</em></div>
+  <div class="hero-sub" id="hero-sub">Версия от 28 апреля 2026 г.</div>
+</div>
+
+<!-- ═══════════════════════════════ RUSSIAN ═══════════════════════════════ -->
+<div class="lang-content active" id="lang-ru">
+<div class="content">
+
+  <div class="doc-section">
+    <div class="section-num">01</div>
+    <div class="section-title">Общие положения</div>
+    <div class="section-body">
+      <p>Настоящая Политика конфиденциальности (далее — «Политика») регулирует порядок сбора, хранения и обработки персональных данных пользователей сайта <strong>ipodoexpertlab.com</strong>.</p>
+      <p>Оператором персональных данных является:<br>
+        <strong>DOO "AZH MONTENEGRO" - BUDVA</strong><br>
+        TIN: 03230180, VAT: 81/31-08322-0<br>
+        Юридический адрес: 85310, Черногория, Будва, ул. XVI (ZGRADA SOLIDARNOSTI), лок. №7<br>
+        Фактический адрес: 85310, Черногория, Будва, Jadranski Put, Zavala Peninsula, iPODO<br>
+        Email: <a href="mailto:info@ipodoexpertlab.com" style="color:var(--accent);">info@ipodoexpertlab.com</a><br>
+        Телефон: +382 69 226 260
+      </p>
+      <p>Используя сайт и отправляя форму заявки, вы соглашаетесь с условиями настоящей Политики.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">02</div>
+    <div class="section-title">Какие данные мы собираем</div>
+    <div class="section-body">
+      <p>При заполнении формы заявки на сайте мы собираем следующие персональные данные:</p>
+      <ul>
+        <li>Имя и фамилия</li>
+        <li>Адрес электронной почты (email)</li>
+        <li>Номер телефона / WhatsApp</li>
+        <li>Выбранный поток (дата и стоимость участия)</li>
+      </ul>
+      <p>Мы не собираем данные банковских карт, паспортные данные или иные чувствительные категории персональных данных через сайт.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">03</div>
+    <div class="section-title">Цели обработки данных</div>
+    <div class="section-body">
+      <p>Ваши данные обрабатываются исключительно в следующих целях:</p>
+      <ul>
+        <li>Обработка заявки на участие в семинаре</li>
+        <li>Отправка подтверждения заявки на email</li>
+        <li>Связь с вами для уточнения деталей участия (через email, WhatsApp, Telegram или Viber)</li>
+        <li>Ведение внутреннего учёта участников</li>
+      </ul>
+      <div class="info-box">
+        <strong>Важно:</strong> Мы не осуществляем маркетинговые рассылки. Ваши данные не передаются третьим лицам для рекламных целей и не используются для профилирования.
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">04</div>
+    <div class="section-title">Передача данных третьим лицам</div>
+    <div class="section-body">
+      <p>В целях обработки заявок мы используем следующие сервисы:</p>
+      <ul>
+        <li><strong>SendPulse</strong> (sendpulse.com) — для отправки email-уведомлений. Политика конфиденциальности: sendpulse.com/legal/privacy-policy</li>
+        <li><strong>Zoho Mail</strong> (zoho.com) — для получения уведомлений о новых заявках. Политика: zoho.com/privacy.html</li>
+      </ul>
+      <p>Данные передаются указанным сервисам исключительно в объёме, необходимом для выполнения технических функций. Мы не продаём и не передаём ваши данные иным третьим лицам.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">05</div>
+    <div class="section-title">Сроки хранения данных</div>
+    <div class="section-body">
+      <p>Ваши персональные данные хранятся в течение <strong>12 месяцев</strong> с момента подачи заявки, после чего удаляются, если иное не требуется действующим законодательством Черногории.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">06</div>
+    <div class="section-title">Ваши права</div>
+    <div class="section-body">
+      <p>В соответствии с Законом о защите персональных данных Черногории (Zakon o zaštiti podataka o ličnosti, 2020) и применимыми нормами GDPR вы имеете право:</p>
+      <ul>
+        <li>Получить доступ к своим персональным данным</li>
+        <li>Потребовать исправления неточных данных</li>
+        <li>Потребовать удаления своих данных («право на забвение»)</li>
+        <li>Отозвать согласие на обработку данных в любой момент</li>
+        <li>Подать жалобу в уполномоченный орган по защите данных Черногории</li>
+      </ul>
+      <p>Для реализации своих прав обратитесь по email: <a href="mailto:info@ipodoexpertlab.com" style="color:var(--accent);">info@ipodoexpertlab.com</a></p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">07</div>
+    <div class="section-title">Файлы cookie</div>
+    <div class="section-body">
+      <p>Сайт использует технически необходимые файлы cookie для корректной работы. Аналитические или маркетинговые cookie на сайте не используются.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">08</div>
+    <div class="section-title">Изменения политики</div>
+    <div class="section-body">
+      <p>Мы оставляем за собой право обновлять настоящую Политику. Актуальная версия всегда доступна на этой странице. Дата последнего обновления указана в заголовке документа.</p>
+    </div>
+  </div>
+
+  <!-- CONSENT BLOCK -->
+  <div class="consent-block">
+    <div class="consent-label">Согласие на обработку персональных данных</div>
+    <div class="consent-title">Согласие <em>субъекта данных</em></div>
+    <div class="consent-body">
+      <p>Настоящим я, субъект персональных данных, добровольно даю своё согласие компании <strong>DOO "AZH MONTENEGRO" - BUDVA</strong> (TIN: 03230180) на обработку следующих персональных данных:</p>
+      <ul>
+        <li>Имя и фамилия</li>
+        <li>Адрес электронной почты</li>
+        <li>Номер телефона</li>
+        <li>Выбранный поток семинара</li>
+      </ul>
+      <p><strong>Цель обработки:</strong> регистрация заявки на участие в офлайн-семинаре iPODO Expert Lab, отправка подтверждения и связь по вопросам участия.</p>
+      <p><strong>Способы обработки:</strong> сбор, запись, хранение, передача сервисам SendPulse и Zoho Mail в объёме, необходимом для отправки уведомлений.</p>
+      <p><strong>Срок хранения:</strong> 12 месяцев с момента подачи заявки.</p>
+      <p>Я осведомлён(а), что могу в любой момент отозвать настоящее согласие, направив соответствующее письмо на адрес <strong>info@ipodoexpertlab.com</strong>. Отзыв согласия не влияет на законность обработки, осуществлённой до его отзыва.</p>
+      <p>Отправляя форму заявки на сайте ipodoexpertlab.com, я подтверждаю, что ознакомлен(а) с Политикой конфиденциальности и даю согласие на обработку моих персональных данных в указанных целях.</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ═══════════════════════════════ ENGLISH ═══════════════════════════════ -->
+<div class="lang-content" id="lang-en">
+<div class="content">
+
+  <div class="doc-section">
+    <div class="section-num">01</div>
+    <div class="section-title">General Provisions</div>
+    <div class="section-body">
+      <p>This Privacy Policy (hereinafter — "Policy") governs the collection, storage and processing of personal data of users of the website <strong>ipodoexpertlab.com</strong>.</p>
+      <p>The data controller is:<br>
+        <strong>DOO "AZH MONTENEGRO" - BUDVA</strong><br>
+        TIN: 03230180, VAT: 81/31-08322-0<br>
+        Legal address: 85310, Montenegro, Budva, st. XVI (ZGRADA SOLIDARNOSTI), local №7<br>
+        Actual address: 85310, Montenegro, Budva, Jadranski Put, Zavala Peninsula, iPODO<br>
+        Email: <a href="mailto:info@ipodoexpertlab.com" style="color:var(--accent);">info@ipodoexpertlab.com</a><br>
+        Phone: +382 69 226 260
+      </p>
+      <p>By using the website and submitting the application form, you agree to the terms of this Policy.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">02</div>
+    <div class="section-title">What Data We Collect</div>
+    <div class="section-body">
+      <p>When filling out the application form on the website, we collect the following personal data:</p>
+      <ul>
+        <li>First and last name</li>
+        <li>Email address</li>
+        <li>Phone number / WhatsApp</li>
+        <li>Selected seminar stream (date and participation fee)</li>
+      </ul>
+      <p>We do not collect bank card details, passport data or other sensitive categories of personal data through the website.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">03</div>
+    <div class="section-title">Purposes of Data Processing</div>
+    <div class="section-body">
+      <p>Your data is processed exclusively for the following purposes:</p>
+      <ul>
+        <li>Processing your seminar registration request</li>
+        <li>Sending a registration confirmation to your email</li>
+        <li>Contacting you to confirm participation details (via email, WhatsApp, Telegram or Viber)</li>
+        <li>Internal record-keeping of participants</li>
+      </ul>
+      <div class="info-box">
+        <strong>Important:</strong> We do not conduct marketing campaigns. Your data is not shared with third parties for advertising purposes and is not used for profiling.
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">04</div>
+    <div class="section-title">Transfer of Data to Third Parties</div>
+    <div class="section-body">
+      <p>To process applications, we use the following services:</p>
+      <ul>
+        <li><strong>SendPulse</strong> (sendpulse.com) — for sending email notifications. Privacy Policy: sendpulse.com/legal/privacy-policy</li>
+        <li><strong>Zoho Mail</strong> (zoho.com) — for receiving notifications about new applications. Privacy Policy: zoho.com/privacy.html</li>
+      </ul>
+      <p>Data is transferred to these services only to the extent necessary to perform their technical functions. We do not sell or transfer your data to any other third parties.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">05</div>
+    <div class="section-title">Data Retention Period</div>
+    <div class="section-body">
+      <p>Your personal data is stored for <strong>12 months</strong> from the date of submission, after which it is deleted, unless otherwise required by applicable Montenegrin law.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">06</div>
+    <div class="section-title">Your Rights</div>
+    <div class="section-body">
+      <p>In accordance with Montenegro's Law on Personal Data Protection (Zakon o zaštiti podataka o ličnosti, 2020) and applicable GDPR provisions, you have the right to:</p>
+      <ul>
+        <li>Access your personal data</li>
+        <li>Request correction of inaccurate data</li>
+        <li>Request deletion of your data ("right to be forgotten")</li>
+        <li>Withdraw your consent to data processing at any time</li>
+        <li>Lodge a complaint with Montenegro's data protection authority</li>
+      </ul>
+      <p>To exercise your rights, contact us at: <a href="mailto:info@ipodoexpertlab.com" style="color:var(--accent);">info@ipodoexpertlab.com</a></p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">07</div>
+    <div class="section-title">Cookies</div>
+    <div class="section-body">
+      <p>The website uses technically necessary cookies to ensure proper functionality. No analytical or marketing cookies are used on this website.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">08</div>
+    <div class="section-title">Policy Updates</div>
+    <div class="section-body">
+      <p>We reserve the right to update this Policy. The current version is always available on this page. The date of the last update is indicated in the document header.</p>
+    </div>
+  </div>
+
+  <!-- CONSENT BLOCK EN -->
+  <div class="consent-block">
+    <div class="consent-label">Consent to Personal Data Processing</div>
+    <div class="consent-title">Data Subject <em>Consent</em></div>
+    <div class="consent-body">
+      <p>I, the data subject, hereby voluntarily give my consent to <strong>DOO "AZH MONTENEGRO" - BUDVA</strong> (TIN: 03230180) to process the following personal data:</p>
+      <ul>
+        <li>First and last name</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+        <li>Selected seminar stream</li>
+      </ul>
+      <p><strong>Purpose of processing:</strong> registration of an application to participate in the iPODO Expert Lab offline seminar, sending a confirmation and communicating on participation matters.</p>
+      <p><strong>Processing methods:</strong> collection, recording, storage, transfer to SendPulse and Zoho Mail services to the extent necessary for sending notifications.</p>
+      <p><strong>Retention period:</strong> 12 months from the date of application submission.</p>
+      <p>I acknowledge that I may withdraw this consent at any time by sending a request to <strong>info@ipodoexpertlab.com</strong>. Withdrawal of consent does not affect the lawfulness of processing carried out prior to its withdrawal.</p>
+      <p>By submitting the application form on ipodoexpertlab.com, I confirm that I have read the Privacy Policy and consent to the processing of my personal data for the stated purposes.</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ═══════════════════════════════ MONTENEGRIN ═══════════════════════════════ -->
+<div class="lang-content" id="lang-me">
+<div class="content">
+
+  <div class="doc-section">
+    <div class="section-num">01</div>
+    <div class="section-title">Opšte odredbe</div>
+    <div class="section-body">
+      <p>Ova Politika privatnosti (u daljem tekstu — „Politika") uređuje način prikupljanja, čuvanja i obrade podataka o ličnosti korisnika sajta <strong>ipodoexpertlab.com</strong>.</p>
+      <p>Rukovalac podacima o ličnosti je:<br>
+        <strong>DOO "AZH MONTENEGRO" - BUDVA</strong><br>
+        PIB: 03230180, PDV: 81/31-08322-0<br>
+        Sjedište: 85310, Crna Gora, Budva, ul. XVI (ZGRADA SOLIDARNOSTI), lok. br. 7<br>
+        Adresa poslovanja: 85310, Crna Gora, Budva, Jadranski Put, Poluostrvo Zavala, iPODO<br>
+        E-mail: <a href="mailto:info@ipodoexpertlab.com" style="color:var(--accent);">info@ipodoexpertlab.com</a><br>
+        Telefon: +382 69 226 260
+      </p>
+      <p>Korišćenjem sajta i slanjem obrasca za prijavu, pristajete na uslove ove Politike.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">02</div>
+    <div class="section-title">Koje podatke prikupljamo</div>
+    <div class="section-body">
+      <p>Prilikom popunjavanja obrasca za prijavu na sajtu, prikupljamo sljedeće podatke o ličnosti:</p>
+      <ul>
+        <li>Ime i prezime</li>
+        <li>Adresa elektronske pošte (e-mail)</li>
+        <li>Broj telefona / WhatsApp</li>
+        <li>Odabrani tok seminara (datum i iznos kotizacije)</li>
+      </ul>
+      <p>Ne prikupljamo podatke o bankovnim karticama, pasošu niti druge osjetljive kategorije podataka o ličnosti putem sajta.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">03</div>
+    <div class="section-title">Svrhe obrade podataka</div>
+    <div class="section-body">
+      <p>Vaši podaci se obrađuju isključivo u sljedeće svrhe:</p>
+      <ul>
+        <li>Obrada prijave za učešće na seminaru</li>
+        <li>Slanje potvrde prijave na e-mail adresu</li>
+        <li>Kontaktiranje radi potvrde detalja učešća (putem e-maila, WhatsApp-a, Telegrama ili Vibera)</li>
+        <li>Vođenje internih evidencija učesnika</li>
+      </ul>
+      <div class="info-box">
+        <strong>Važno:</strong> Ne vršimo marketinške kampanje. Vaši podaci se ne dijele sa trećim licima u reklamne svrhe i ne koriste se za profilisanje.
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">04</div>
+    <div class="section-title">Prenos podataka trećim licima</div>
+    <div class="section-body">
+      <p>U svrhu obrade prijava koristimo sljedeće servise:</p>
+      <ul>
+        <li><strong>SendPulse</strong> (sendpulse.com) — za slanje e-mail obavještenja. Politika privatnosti: sendpulse.com/legal/privacy-policy</li>
+        <li><strong>Zoho Mail</strong> (zoho.com) — za primanje obavještenja o novim prijavama. Politika: zoho.com/privacy.html</li>
+      </ul>
+      <p>Podaci se prenose navedenim servisima isključivo u obimu neophodnom za obavljanje tehničkih funkcija. Ne prodajemo niti prenosimo Vaše podatke drugim trećim licima.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">05</div>
+    <div class="section-title">Rok čuvanja podataka</div>
+    <div class="section-body">
+      <p>Vaši podaci o ličnosti čuvaju se <strong>12 mjeseci</strong> od dana podnošenja prijave, nakon čega se brišu, ukoliko važeći propisi Crne Gore ne nalažu drugačije.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">06</div>
+    <div class="section-title">Vaša prava</div>
+    <div class="section-body">
+      <p>U skladu sa Zakonom o zaštiti podataka o ličnosti Crne Gore (2020) i primjenjivim odredbama GDPR-a, imate pravo da:</p>
+      <ul>
+        <li>Pristupite svojim podacima o ličnosti</li>
+        <li>Zahtijevate ispravku netačnih podataka</li>
+        <li>Zahtijevate brisanje svojih podataka („pravo na zaborav")</li>
+        <li>Opozovete saglasnost za obradu podataka u bilo kom trenutku</li>
+        <li>Podnesete pritužbu nadležnom organu za zaštitu podataka Crne Gore</li>
+      </ul>
+      <p>Radi ostvarivanja svojih prava, obratite nam se na: <a href="mailto:info@ipodoexpertlab.com" style="color:var(--accent);">info@ipodoexpertlab.com</a></p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">07</div>
+    <div class="section-title">Kolačići (cookies)</div>
+    <div class="section-body">
+      <p>Sajt koristi tehnički neophodne kolačiće za ispravno funkcionisanje. Na sajtu se ne koriste analitički niti marketinški kolačići.</p>
+    </div>
+  </div>
+
+  <div class="doc-section">
+    <div class="section-num">08</div>
+    <div class="section-title">Izmjene politike</div>
+    <div class="section-body">
+      <p>Zadržavamo pravo da ažuriramo ovu Politiku. Aktuelna verzija je uvijek dostupna na ovoj stranici. Datum posljednjeg ažuriranja naveden je u zaglavlju dokumenta.</p>
+    </div>
+  </div>
+
+  <!-- CONSENT BLOCK ME -->
+  <div class="consent-block">
+    <div class="consent-label">Saglasnost za obradu podataka o ličnosti</div>
+    <div class="consent-title">Saglasnost <em>lica čiji se podaci obrađuju</em></div>
+    <div class="consent-body">
+      <p>Ovim putem, kao lice čiji se podaci obrađuju, dobrovoljno dajem saglasnost kompaniji <strong>DOO "AZH MONTENEGRO" - BUDVA</strong> (PIB: 03230180) za obradu sljedećih podataka o ličnosti:</p>
+      <ul>
+        <li>Ime i prezime</li>
+        <li>Adresa elektronske pošte</li>
+        <li>Broj telefona</li>
+        <li>Odabrani tok seminara</li>
+      </ul>
+      <p><strong>Svrha obrade:</strong> registracija prijave za učešće na offline seminaru iPODO Expert Lab, slanje potvrde i komunikacija u vezi sa učešćem.</p>
+      <p><strong>Načini obrade:</strong> prikupljanje, evidentiranje, čuvanje, prenos servisima SendPulse i Zoho Mail u obimu neophodnom za slanje obavještenja.</p>
+      <p><strong>Rok čuvanja:</strong> 12 mjeseci od dana podnošenja prijave.</p>
+      <p>Svjestan/svjesna sam da mogu opozvati ovu saglasnost u bilo kom trenutku slanjem zahtjeva na adresu <strong>info@ipodoexpertlab.com</strong>. Opoziv saglasnosti ne utiče na zakonitost obrade izvršene prije opoziva.</p>
+      <p>Slanjem obrasca za prijavu na sajtu ipodoexpertlab.com, potvrđujem da sam upoznat/a sa Politikom privatnosti i dajem saglasnost za obradu mojih podataka o ličnosti u navedene svrhe.</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="doc-footer">
+  <div class="df-brand">iPODO Expert Lab</div>
+  <div class="df-meta">
+    DOO "AZH MONTENEGRO" - BUDVA · TIN 03230180<br>
+    Budva, Montenegro · <a href="mailto:info@ipodoexpertlab.com" style="color:var(--accent);text-decoration:none;">info@ipodoexpertlab.com</a>
+  </div>
+</div>
+
+<script>
+const heroTitles = {
+  ru: 'Политика <em>конфиденциальности</em>',
+  en: 'Privacy <em>Policy</em>',
+  me: 'Politika <em>privatnosti</em>'
+};
+const heroSubs = {
+  ru: 'Версия от 28 апреля 2026 г.',
+  en: 'Version of April 28, 2026',
+  me: 'Verzija od 28. aprila 2026.'
+};
+
+function setLang(lang) {
+  document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+  document.querySelector(`[onclick="setLang('${lang}')"]`).classList.add('active');
+  document.getElementById('hero-title').innerHTML = heroTitles[lang];
+  document.getElementById('hero-sub').textContent = heroSubs[lang];
+  document.documentElement.lang = lang === 'me' ? 'cnr' : lang;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

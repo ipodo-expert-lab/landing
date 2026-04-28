@@ -66,7 +66,7 @@ const translations = {
     form_stream2_label: "13–14 мая · <strong>€290</strong> · Базовый",
     submitBtn: "Отправить заявку →",
     form_privacy: "После отправки — письмо с деталями придёт на ваш email.<br>Менеджер свяжется в течение 15 минут.",
-    footer_copy: "© 2025 iPODO expert lab. Все права защищены.",
+    footer_copy: "© 2026 iPODO expert lab. Все права защищены.",
     footer_nav_program: "Программа", footer_nav_teacher: "О преподавателе", footer_nav_reviews: "Отзывы", footer_nav_pricing: "Цены",
     sticky_left: "Программа", sticky_right: "Забронировать место →",
     // CASES

@@ -38,7 +38,7 @@ exports.handler = async (event) => {
     const crmData = await crmRes.json();
     console.log("CRM response:", JSON.stringify(crmData));
 
-    // Email to client
+    // Email to client — шаблон SendPulse #87677
     const clientEmailRes = await fetch("https://api.sendpulse.com/smtp/emails", {
       method: "POST",
       headers: {
@@ -50,15 +50,15 @@ exports.handler = async (event) => {
           subject: "Ваша заявка принята — iPODO expert lab",
           from: { name: "iPODO expert lab", email: "info@ipodoexpertlab.com" },
           to: [{ name, email }],
-          text: `Здравствуйте, ${name}!\n\nВаша заявка на офф-лайн семинар iPODO expert lab принята.\n\nВыбранный поток: ${stream}\n${phone ? `Телефон: ${phone}\n` : ""}Менеджер свяжется с Вами в ближайшее время.\n\nС уважением,\nКоманда iPODO expert lab\n+382-67-417-580\nipodoexpertlab.com`,
-          html: `<div style="font-family:Arial,sans-serif;max-width:520px;margin:0 auto;color:#222;font-size:15px;line-height:1.6">
-            <p>Здравствуйте, ${name}!</p>
-            <p>Ваша заявка на офф-лайн семинар <strong>iPODO expert lab</strong> принята.</p>
-            <p><strong>Выбранный поток:</strong> ${stream}</p>
-            ${phone ? `<p><strong>Телефон:</strong> ${phone}</p>` : ""}
-            <p>Менеджер свяжется с Вами в ближайшее время.</p>
-            <p>С уважением,<br>Команда iPODO expert lab<br>+382-67-417-580<br>ipodoexpertlab.com</p>
-          </div>`,
+          template: {
+            id: 87677,
+            variables: {
+              name: name,
+              email: email,
+              phone: phone || "—",
+              stream: stream,
+            },
+          },
         },
       }),
     });
