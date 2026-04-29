@@ -26,10 +26,22 @@ exports.handler = async (event) => {
       return { statusCode: 500, body: JSON.stringify({ error: "No token" }) };
     }
 
+    // Google Sheets — запись заявки
+    const sheetsRes = await fetch(
+      "https://script.google.com/macros/s/AKfycbzecUUINBEYTOFnw2xMG-M86SQgQnnrNKPuStZhElAOmTMK75JQe5dxnxpB0MiGUEJMNA/exec",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, phone, stream, lang }),
+      },
+    );
+    const sheetsData = await sheetsRes.json();
+    console.log("Sheets response:", JSON.stringify(sheetsData));
+
     // Template IDs by language
     const templateIds = {
-      ru: 87677,  // русский шаблон
-      sr: 87725,  // сербский шаблон
+      ru: 87677, // русский шаблон
+      sr: 87725, // сербский шаблон
     };
     const templateId = templateIds[lang] || templateIds.ru;
     console.log("Language:", lang, "Template ID:", templateId);
@@ -42,29 +54,35 @@ exports.handler = async (event) => {
     const subject = subjects[lang] || subjects.ru;
 
     // Email to client
-    const clientEmailRes = await fetch("https://api.sendpulse.com/smtp/emails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${access_token}`,
-      },
-      body: JSON.stringify({
-        email: {
-          subject,
-          from: { name: "iPODO expert lab", email: "info@ipodoexpertlab.com" },
-          to: [{ name, email }],
-          template: {
-            id: templateId,
-            variables: {
-              name,
-              email,
-              phone: phone || "—",
-              stream,
+    const clientEmailRes = await fetch(
+      "https://api.sendpulse.com/smtp/emails",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${access_token}`,
+        },
+        body: JSON.stringify({
+          email: {
+            subject,
+            from: {
+              name: "iPODO expert lab",
+              email: "info@ipodoexpertlab.com",
+            },
+            to: [{ name, email }],
+            template: {
+              id: templateId,
+              variables: {
+                name,
+                email,
+                phone: phone || "—",
+                stream,
+              },
             },
           },
-        },
-      }),
-    });
+        }),
+      },
+    );
     const clientEmailData = await clientEmailRes.json();
     console.log("Client email response:", JSON.stringify(clientEmailData));
 
