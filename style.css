@@ -837,15 +837,26 @@ nav {
 
 .ba-img {
   flex: 1;
-  aspect-ratio: 1;
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 12px;
-  border: 1px dashed rgba(255, 255, 255, 0.12);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 5px;
+  gap: 6px;
+}
+
+.ba-img-photo {
+  width: 100%;
+  aspect-ratio: 2/3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+}
+
+.ba-img-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .ba-icon {
@@ -855,7 +866,7 @@ nav {
 .ba-img span:last-child {
   font-size: 9px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.8px;
   text-transform: uppercase;
 }
@@ -2144,20 +2155,16 @@ footer {
 /* ══ SLIDER CARDS BIGGER ══ */
 @media (max-width: 900px) {
   .cases-slider .case-card {
-    flex: 0 0 calc(75% - 6px);
-    min-width: calc(75% - 6px);
+    flex: 0 0 80vw;
+    min-width: 80vw;
   }
 
   .before-after {
     margin-bottom: 10px;
   }
 
-  .ba-img {
-    aspect-ratio: 4/3;
-  }
-
   .ba-icon {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
@@ -2257,5 +2264,33 @@ footer {
   .teacher-name {
     font-size: 18px;
     margin-bottom: 6px;
+  }
+}
+/* MOBILE SLIDER IMAGES FIX */
+@media (max-width: 900px) {
+  .cases-slider .ba-img {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .cases-slider .ba-img-photo {
+    width: 100% !important;
+    height: 150px !important;
+    aspect-ratio: unset !important;
+    display: block !important;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .cases-slider .ba-img-photo img {
+    width: 100% !important;
+    height: 150px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    display: block !important;
   }
 }

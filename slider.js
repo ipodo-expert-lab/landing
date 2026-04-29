@@ -1,5 +1,5 @@
 let sliderIndex = 0;
-const TOTAL_CARDS = 12;
+const TOTAL_CARDS = 8;
 
 function initSlider() {
   const dots = document.getElementById('sliderDots');
@@ -12,6 +12,7 @@ function initSlider() {
     dots.appendChild(d);
   }
   updateSlider();
+  initTouch();
 }
 
 function slideCases(dir) {
@@ -32,6 +33,40 @@ function updateSlider() {
   document.querySelectorAll('.slider-dot').forEach((d, i) => d.classList.toggle('active', i === sliderIndex));
   document.getElementById('sliderPrev').disabled = sliderIndex === 0;
   document.getElementById('sliderNext').disabled = sliderIndex === TOTAL_CARDS - 1;
+}
+
+function initTouch() {
+  const slider = document.getElementById('casesSlider');
+  if (!slider) return;
+
+  let startX = 0;
+  let startY = 0;
+  let isDragging = false;
+
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    isDragging = true;
+  }, { passive: true });
+
+  slider.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const diffX = startX - e.touches[0].clientX;
+    const diffY = Math.abs(startY - e.touches[0].clientY);
+    // Only prevent scroll if horizontal swipe
+    if (Math.abs(diffX) > diffY) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  slider.addEventListener('touchend', (e) => {
+    if (!isDragging) return;
+    const diffX = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diffX) > 40) {
+      slideCases(diffX > 0 ? 1 : -1);
+    }
+    isDragging = false;
+  }, { passive: true });
 }
 
 window.addEventListener('load', initSlider);
