@@ -83,14 +83,15 @@ const translations = {
     case11_name: "Натоптыши", case11_desc: "Пациентка 50 л. Разгрузка зон давления.",
     case12_name: "Ксантонихия", case12_desc: "Пациент 67 л. Изменение цвета пластины.",
     // REVIEWS
-    rev1_text: "Честно, шла с большими сомнениями — думала, что мне как мастеру это всё слишком сложно. Но уже в первый день поняла, что нет. Анна Геннадьевна объясняет так, что даже непонятные вещи становятся логичными.", rev1_author: "Марина, 34 года", rev1_role: "Мастер педикюра · Москва",
-    rev2_text: "Топ. Практика на моделях — это вообще отдельная история, такого нигде не видела на курсах. Работаешь руками, рядом стоит преподаватель и сразу говорит, что не так. Это дорогого стоит.", rev2_author: "Алина, 28 лет", rev2_role: "Мастер ногтевого сервиса · Краснодар",
-    rev3_text: "Работаю в этой сфере уже 9 лет. Думала, что семинар — это просто повторение. Ошиблась. Особенно сильно ударил блок про онихолизис — оказывается, я несколько лет делала это не совсем правильно.", rev3_author: "Наталья, 41 год", rev3_role: "Подолог · Санкт-Петербург",
-    rev4_text: "Очень понравилось. Информации много, но она не перегружает — всё структурировано и понятно зачем. Уже думаю о годовом курсе.", rev4_author: "Кристина, 26 лет", rev4_role: "Начинающий подолог · Алматы",
-    rev5_text: "После семинара подняла цены на медицинский педикюр. Теперь я могу объяснить клиенту, что именно делаю и почему — это совсем другой разговор.", rev5_author: "Ирина, 37 лет", rev5_role: "Мастер медицинского педикюра · Рига",
-    rev6_text: "Хороший семинар, материал реально полезный. Анна Геннадьевна отвечала на все вопросы, даже самые «странные». Буду рекомендовать коллегам.", rev6_author: "Екатерина, 30 лет", rev6_role: "Подолог · Тбилиси",
-    rev7_text: "Я пришла как мастер с опытом, но без базы в подологии. За два дня получила именно то, чего не хватало — понимание того, что происходит с ногтём и стопой. Раньше я просто делала. Теперь я понимаю, что делаю. Это очень разные вещи, как оказалось.", rev7_author: "Светлана, 44 года", rev7_role: "Мастер педикюра · Минск",
-    rev8_text: "Приехала из другого города специально. Не пожалела ни разу. Спасибо!", rev8_author: "Виктория, 32 года", rev8_role: "Мастер педикюра · Киев",
+    rev1_text: "Честно, шла с большими сомнениями — думала, что мне как мастеру это всё слишком сложно. Но уже в первый день поняла, что нет. Анна Геннадьевна объясняет так, что даже непонятные вещи становятся логичными.", rev1_author: "Елена З.", rev1_role: "Мастер педикюра · Белград",
+    rev2_text: "Топ. Практика на моделях — это вообще отдельная история, такого нигде не видела на курсах. Работаешь руками, рядом стоит преподаватель и сразу говорит, что не так. Это дорогого стоит.", rev2_author: "Милица Ив.", rev2_role: "Мастер педикюра · Нови Сад",
+    rev3_text: "Работаю в этой сфере уже 9 лет. Думала, что семинар — это просто повторение. Ошиблась. Особенно сильно ударил блок про онихолизис — оказывается, я несколько лет делала это не совсем правильно.", rev3_author: "Ивана Л.", rev3_role: "Мастер педикюра и маникюра · Загреб",
+    rev4_text: "Очень понравилось. Информации много, но она не перегружает — всё структурировано и понятно зачем. Уже думаю о годовом курсе.", rev4_author: "Никола Г.", rev4_role: "Подолог · Белград",
+    rev5_text: "После семинара подняла цены на медицинский педикюр. Теперь я могу объяснить клиенту, что именно делаю и почему — это совсем другой разговор.", rev5_author: "Тамара Т.", rev5_role: "Мастер ногтевого сервиса · Сплит",
+    rev6_text: "Хороший семинар, материал реально полезный. Анна Геннадьевна отвечала на все вопросы, даже самые «странные». Буду рекомендовать коллегам.", rev6_author: "Мария", rev6_role: "Подолог · Подгорица",
+    rev7_text: "Я пришла как мастер с опытом, но без базы в подологии. За два дня получила именно то, чего не хватало — понимание того, что происходит с ногтём и стопой. Раньше я просто делала. Теперь я понимаю, что делаю. Это очень разные вещи, как оказалось.", rev7_author: "Ана П.", rev7_role: "Мастер маникюра · Сараево",
+    rev8_text: "Приехала из другого города специально. Не пожалела ни разу. Спасибо!", rev8_author: "Николина Р.", rev8_role: "Мастер маникюра и педикюра · Дубровник",
+    rev9_author: "Милица Р.", rev9_role: "Мастер педикюра · Мостар", rev9_text: "Самое ценное для меня была практика на моделях. Работаешь и сразу получаешь обратную связь от преподавателя. Честно, раньше такого формата не встречала. За счёт этого сразу увидела результат от семинара.",
   },
   sr: {
     nav_program: "Program", nav_teacher: "O predavaču", nav_reviews: "Recenzije", nav_pricing: "Cene", nav_cta: "Prijavite se",
@@ -176,14 +177,15 @@ const translations = {
     case11_name: "Žuljevi", case11_desc: "Pacijentkinja 50 g. Rasterećenje zona pritiska.",
     case12_name: "Ksantoniхija", case12_desc: "Pacijent 67 g. Promjena boje ploče.",
     // REVIEWS
-    rev1_text: "Iskreno, išla sam s velikim sumnjama — mislila sam da mi je kao majstoru sve to previše složeno. Ali već prvog dana shvatila sam da nije. Ana Gennadjevna objašnjava tako da i nejasne stvari postaju logične.", rev1_author: "Marina, 34 godine", rev1_role: "Majstor pedikure · Moskva",
-    rev2_text: "Top. Praksa na modelima je posebna priča, nigdje to nisam videla na kursevima. Radiš rukama, pored stoji predavač i odmah govori šta nije u redu. To vredi puno.", rev2_author: "Alina, 28 godina", rev2_role: "Majstor nail servisa · Krasnodar",
-    rev3_text: "Radim u ovoj oblasti već 9 godina. Mislila sam da je seminar samo ponavljanje. Pogrešila sam. Posebno me je pogodio blok o oniholizisu — ispostavilo se da sam nekoliko godina radila to ne sasvim ispravno.", rev3_author: "Natalija, 41 godina", rev3_role: "Podolog · Sankt-Peterburg",
-    rev4_text: "Veoma mi se svidelo. Informacija ima puno, ali ne opterećuje — sve je strukturirano i jasno zašto. Već razmišljam o godišnjem kursu.", rev4_author: "Kristina, 26 godina", rev4_role: "Početnik podolog · Almati",
-    rev5_text: "Nakon seminara podigla sam cene medicinske pedikure. Sada mogu objasniti klijentu šta tačno radim i zašto — to je sasvim drugačiji razgovor.", rev5_author: "Irina, 37 godina", rev5_role: "Majstor medicinske pedikure · Riga",
-    rev6_text: "Dobar seminar, materijal je zaista koristan. Ana Gennadjevna je odgovarala na sva pitanja, čak i ona najčudnija. Preporučuću kolegama.", rev6_author: "Jekaterina, 30 godina", rev6_role: "Podolog · Tbilisi",
-    rev7_text: "Došla sam kao majstor s iskustvom, ali bez baze u podologiji. Za dva dana dobila sam upravo ono čega je nedostajalo — razumevanje šta se dešava s noktom i stopalom. Ranije sam samo radila. Sada razumijem šta radim. To su veoma različite stvari, kako se ispostavilo.", rev7_author: "Svetlana, 44 godine", rev7_role: "Majstor pedikure · Minsk",
-    rev8_text: "Došla sam iz drugog grada posebno. Nisam ni jednom požalila. Hvala!", rev8_author: "Viktorija, 32 godine", rev8_role: "Majstor pedikure · Kijev",
+    rev1_text: "Iskreno, išla sam s velikim sumnjama — mislila sam da mi je kao majstoru sve to previše složeno. Ali već prvog dana shvatila sam da nije. Ana Gennadjevna objašnjava tako da i nejasne stvari postaju logične.", rev1_author: "Jelena Z.", rev1_role: "Majstor pedikira · Beograd",
+    rev2_text: "Top. Praksa na modelima je posebna priča, nigdje to nisam videla na kursevima. Radiš rukama, pored stoji predavač i odmah govori šta nije u redu. To vredi puno.", rev2_author: "Milica Iv.", rev2_role: "Majstor pedikira · Novi Sad",
+    rev3_text: "Radim u ovoj oblasti već 9 godina. Mislila sam da je seminar samo ponavljanje. Pogrešila sam. Posebno me je pogodio blok o oniholizisu — ispostavilo se da sam nekoliko godina radila to ne sasvim ispravno.", rev3_author: "Ivana L.", rev3_role: "Majstor pedikira i manikira · Zagreb",
+    rev4_text: "Veoma mi se svidelo. Informacija ima puno, ali ne opterećuje — sve je strukturirano i jasno zašto. Već razmišljam o godišnjem kursu.", rev4_author: "Nikola G.", rev4_role: "Podolog · Beograd",
+    rev5_text: "Nakon seminara podigla sam cene medicinske pedikure. Sada mogu objasniti klijentu šta tačno radim i zašto — to je sasvim drugačiji razgovor.", rev5_author: "Tamara T.", rev5_role: "Majstor noktiju · Split",
+    rev6_text: "Dobar seminar, materijal je zaista koristan. Ana Gennadjevna je odgovarala na sva pitanja, čak i ona najčudnija. Preporučuću kolegama.", rev6_author: "Marija", rev6_role: "Podolog · Podgorica",
+    rev7_text: "Došla sam kao majstor s iskustvom, ali bez baze u podologiji. Za dva dana dobila sam upravo ono čega je nedostajalo — razumevanje šta se dešava s noktom i stopalom. Ranije sam samo radila. Sada razumijem šta radim. To su veoma različite stvari.", rev7_author: "Ana P.", rev7_role: "Majstor manikira · Sarajevo",
+    rev8_text: "Došla sam iz drugog grada posebno. Nisam ni jednom požalila. Hvala!", rev8_author: "Nikolina R.", rev8_role: "Majstor manikira i pedikira · Dubrovnik",
+    rev9_author: "Milica R.", rev9_role: "Majstor pedikira · Mostar", rev9_text: "Najvrednije za mene bila je praksa na modelima. Radiš i odmah dobijaš povratnu informaciju od predavača. Iskreno, ranije nisam srela takav format. Zahvaljujući tome odmah sam videla rezultat seminara.",
   }
 };
 
@@ -252,11 +254,19 @@ function applyLang(lang) {
     setText('case'+i+'_desc', t['case'+i+'_desc']);
   }
   // REVIEWS
-  for (let i = 1; i <= 8; i++) {
+  for (let i = 1; i <= 9; i++) {
     setText('rev'+i+'_text', t['rev'+i+'_text']);
     setText('rev'+i+'_author', t['rev'+i+'_author']);
     setText('rev'+i+'_role', t['rev'+i+'_role']);
   }
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('lang-active', btn.dataset.lang === lang));
   localStorage.setItem('lang', lang);
+
+  // Translate До/После labels
+  document.querySelectorAll('.ba-img:not(.after) span').forEach(el => {
+    el.textContent = lang === 'sr' ? 'Pre' : 'До';
+  });
+  document.querySelectorAll('.ba-img.after span').forEach(el => {
+    el.textContent = lang === 'sr' ? 'Posle' : 'После';
+  });
 }
